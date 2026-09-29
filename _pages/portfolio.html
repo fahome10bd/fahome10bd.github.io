@@ -1,0 +1,16 @@
+---
+layout: archive
+title: "Projects"
+permalink: /portfolio/
+author_profile: true
+---
+
+{% include base_path %}
+
+These projects document professional geospatial and computer-vision work, undergraduate research, and an earlier public AI project. Each page distinguishes work completed from a research question I would pursue further.
+
+{% assign ordered_projects = site.portfolio | sort: "order" %}
+{% for post in ordered_projects %}
+  {% include archive-single.html %}
+{% endfor %}
+
