@@ -14,9 +14,8 @@ title_separator          : "-"
 name                     : &name "Mohammad Mahmudul Hasan"
 description              : &description "Research portfolio in geospatial AI, computer vision, photogrammetry and biomedical signal processing"
 url                      : https://fahome10bd.github.io
-                                                           # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "/mahmudul"
-repository               : "fahome10bd/mahmudul"
+baseurl                  : ""
+repository               : "fahome10bd/fahome10bd.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.

@@ -2,7 +2,7 @@
 
 This repository uses the [AcademicPages](https://github.com/academicpages/academicpages.github.io) Jekyll template, adapted for Mohammad Mahmudul Hasan's graduate research applications. It preserves the AcademicPages theme, publication and portfolio collections, sidebar profile, navigation and Markdown CV structure. The theme is distributed under the included MIT [LICENSE](LICENSE).
 
-The site is configured as a GitHub Pages **project site** for this repository, `fahome10bd/mahmudul`. After Pages is enabled, its expected address is **https://fahome10bd.github.io/mahmudul/**. The `_config.yml` settings use `url: https://fahome10bd.github.io` and `baseurl: /mahmudul`, matching [GitHub's Jekyll guidance for project sites](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll).
+The site is configured as a GitHub Pages **user site** for this repository, `fahome10bd/fahome10bd.github.io`. After Pages is enabled, its expected address is **https://fahome10bd.github.io/**. The `_config.yml` settings use `url: https://fahome10bd.github.io` and `baseurl: ""`, matching [GitHub's Jekyll guidance for user sites](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll).
 
 ## What to edit
 

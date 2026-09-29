@@ -7,7 +7,7 @@ from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "_site"
-BASEURL = "/mahmudul"
+BASEURL = ""
 
 
 class Page(HTMLParser):
@@ -34,11 +34,12 @@ def target_for(source: Path, raw: str) -> tuple[Path | None, str]:
     path = unquote(parsed.path)
     if not path:
         return source, parsed.fragment
-    if path.startswith(BASEURL + "/") or path == BASEURL:
-        path = path[len(BASEURL):]
-    elif path.startswith("/"):
-        # A root-relative path outside the project site's base URL would break on GitHub Pages.
-        raise ValueError(f"Link omits {BASEURL}: {raw}")
+    if BASEURL:
+        if path.startswith(BASEURL + "/") or path == BASEURL:
+            path = path[len(BASEURL):]
+        elif path.startswith("/"):
+            # A root-relative path outside the project site's base URL would break on GitHub Pages.
+            raise ValueError(f"Link omits {BASEURL}: {raw}")
     target = SITE / path.lstrip("/") if parsed.netloc or raw.startswith("/") else source.parent / path
     if target.is_dir() or path.endswith("/"):
         target /= "index.html"
