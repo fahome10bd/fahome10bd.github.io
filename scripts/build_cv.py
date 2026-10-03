@@ -8,7 +8,8 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import Paragraph, SimpleDocTemplate
+from reportlab.pdfgen import canvas
+from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -20,18 +21,18 @@ pdfmetrics.registerFont(TTFont("ArialCV-Bold", str(FONTS / "arialbd.ttf")))
 pdfmetrics.registerFont(TTFont("GeorgiaCV-Bold", str(FONTS / "georgiab.ttf")))
 pdfmetrics.registerFontFamily("ArialCV", normal="ArialCV", bold="ArialCV-Bold")
 
-INK = colors.HexColor("#182a2e")
-GREEN = colors.HexColor("#176c5b")
-GRAY = colors.HexColor("#50636a")
+INK = colors.HexColor("#142327")
+GREEN = colors.HexColor("#146b58")
+GRAY = colors.HexColor("#4d5f66")
 
 STYLES = {
-    "name": ParagraphStyle("name", fontName="GeorgiaCV-Bold", fontSize=22, leading=27, textColor=INK, spaceAfter=2),
-    "role": ParagraphStyle("role", fontName="ArialCV-Bold", fontSize=10, leading=14, textColor=GREEN, spaceAfter=5),
-    "contact": ParagraphStyle("contact", fontName="ArialCV", fontSize=8.3, leading=12, textColor=GRAY, spaceAfter=5),
-    "heading": ParagraphStyle("heading", fontName="ArialCV-Bold", fontSize=9.3, leading=13, textColor=INK, spaceBefore=10, spaceAfter=3),
-    "body": ParagraphStyle("body", fontName="ArialCV", fontSize=9, leading=12.6, textColor=INK, spaceAfter=4),
-    "bullet": ParagraphStyle("bullet", fontName="ArialCV", fontSize=8.9, leading=12.3, textColor=INK, leftIndent=10, firstLineIndent=-8, spaceAfter=2.5),
-    "small": ParagraphStyle("small", fontName="ArialCV", fontSize=8.3, leading=11.8, textColor=GRAY, spaceAfter=3),
+    "name": ParagraphStyle("name", fontName="GeorgiaCV-Bold", fontSize=18, leading=22, textColor=INK, spaceAfter=1),
+    "role": ParagraphStyle("role", fontName="ArialCV-Bold", fontSize=9.5, leading=13, textColor=GREEN, spaceAfter=2),
+    "contact": ParagraphStyle("contact", fontName="ArialCV", fontSize=7.8, leading=11, textColor=GRAY, spaceAfter=4),
+    "heading": ParagraphStyle("heading", fontName="ArialCV-Bold", fontSize=8.8, leading=11.5, textColor=INK, spaceBefore=6, spaceAfter=2),
+    "body": ParagraphStyle("body", fontName="ArialCV", fontSize=8.2, leading=11, textColor=INK, spaceAfter=2),
+    "bullet": ParagraphStyle("bullet", fontName="ArialCV", fontSize=8.0, leading=10.6, textColor=INK, leftIndent=8, firstLineIndent=-6, spaceAfter=1.8),
+    "small": ParagraphStyle("small", fontName="ArialCV", fontSize=7.8, leading=10.5, textColor=GRAY, spaceAfter=2),
 }
 
 
@@ -39,37 +40,68 @@ def para(text: str, style: str = "body") -> Paragraph:
     return Paragraph(text, STYLES[style])
 
 
+class PageCountCanvas(canvas.Canvas):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.pages = 0
+
+    def showPage(self):
+        self.pages += 1
+        super().showPage()
+
+
 def main() -> None:
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     body = [
         para("Mohammad Mahmudul Hasan", "name"),
-        para("Team Lead, AI Engineer  |  Computer vision, GIS and photogrammetry", "role"),
-        para('Bangladesh  ·  <link href="https://github.com/fahome10bd" color="#176c5b">github.com/fahome10bd</link>  ·  <link href="https://www.linkedin.com/in/fahome10bd/" color="#176c5b">linkedin.com/in/fahome10bd</link>', "contact"),
-        para("RESEARCH PROFILE", "heading"),
-        para("AI engineering team lead with experience in algorithm development and system design for computer vision and GIS applications. My work spans photogrammetric orthophoto production, point-cloud processing, urban building-change analysis and road-asset inspection. Seeking graduate research in reliable geospatial AI and 3D mapping."),
+        para("Project Lead, AI Engineer &nbsp;|&nbsp; Geospatial AI, 3D Urban Modeling & Point Clouds", "role"),
+        para('Khilgaon, Dhaka, Bangladesh &nbsp;·&nbsp; +8801521434403 &nbsp;·&nbsp; <link href="mailto:mahmudul18@iut-dhaka.edu" color="#146b58">mahmudul18@iut-dhaka.edu</link> &nbsp;·&nbsp; <link href="https://github.com/fahome10bd" color="#146b58">github.com/fahome10bd</link> &nbsp;·&nbsp; <link href="https://www.linkedin.com/in/fahome10bd/" color="#146b58">linkedin.com/in/fahome10bd</link> &nbsp;·&nbsp; <link href="https://www.researchgate.net/profile/Mohammad-Mahmudul-Hasan" color="#146b58">ResearchGate</link>', "contact"),
+        
+        para("RESEARCH FOCUS", "heading"),
+        para("Advancing <b>3D Urban Modeling</b> and <b>Autonomous GIS</b> by integrating Geospatial AI (GeoAI) with high-fidelity reconstruction: <b>Autonomous Digital Twins</b> (3D Gaussian Splatting & CityGML), <b>Spatial Intelligence</b> (point cloud analytics, sub-pixel camera pose estimation, and automated BIM extraction), and <b>Multi-Temporal Change Detection</b>."),
+        
         para("EDUCATION", "heading"),
-        para("<b>Islamic University of Technology, Bangladesh</b> — BSc in Electrical and Electronic Engineering, completed 22 March 2021. CGPA <b>3.76/4.00</b>; first class with honours."),
-        para("Selected coursework: Project and Thesis (A+ in both courses); Digital Signal Processing (A); Artificial Neural Networks and Fuzzy Logic (A+).", "small"),
+        para("<b>Islamic University of Technology (IUT), Bangladesh</b> — B.Sc. in Electrical and Electronic Engineering, 2017 – 2021"),
+        para("CGPA: <b>3.76 / 4.00</b> (First Class Honours). Selected Coursework: Project & Thesis (A+ / A+), DSP (A), Neural Networks & Fuzzy Logic (A+).", "small"),
+        para("<b>Thesis:</b> <i>Quantifying Locomotive Features in EEG of Impaired Consciousness (Coma) with Distinctive Cerebral Rhythms</i>. Analyzed EEG time-series to isolate discriminative spectral and temporal features characterizing depths of consciousness.", "small"),
+        para("<b>Notre Dame College, Dhaka</b> — Higher Secondary Certificate (Science), 2014 – 2016. GPA: <b>5.00 / 5.00</b> (Government Scholarship).", "small"),
+        
         para("PROFESSIONAL EXPERIENCE", "heading"),
-        para("<b>HawarIT Limited</b> — with the company since 2021; current role <b>Team Lead, AI Engineer</b>. Lead a six-member AI engineering team."),
-        para("•  Develop algorithms and design systems for computer vision and GIS tasks using imagery and spatial data.", "bullet"),
-        para("•  Work across AT-related processing, DSM/DTM, image rectification, seamlines, tiling, bridge editing and final orthophoto output.", "bullet"),
-        para("•  Process and align point clouds across multiple trajectories, followed by segmentation and classification.", "bullet"),
-        para("•  Support GIS digitization, multi-year building-change analysis and traffic-sign assessment from car-captured 360-degree imagery.", "bullet"),
+        para("<b>HawarIT Limited, Bangladesh</b> — Project Lead, AI Department (2024–Present) &nbsp;|&nbsp; Senior AI Engineer (2023–2024) &nbsp;|&nbsp; ML Engineer (2021–2023)"),
+        para("Lead multidisciplinary teams building AI and geospatial automation systems across photogrammetry, point clouds, and GIS platforms:", "small"),
+        para("• <b>3D Point Cloud Intelligence & BIM Extraction:</b> Developed semantic segmentation and automated pipe/geometry extraction on aerial, mobile, and indoor LiDAR datasets (95% extraction accuracy, 60% manual modeling time reduction).", "bullet"),
+        para("• <b>360° Street-View GeoAI Localization:</b> Built an end-to-end YOLOv5 and tracking pipeline detecting and localizing 130 traffic signs and 33 street furniture assets from vehicle 360° imagery (>95% detection accuracy, 92% geospatial localization precision).", "bullet"),
+        para("• <b>Multi-Temporal Change Detection:</b> Engineered deep learning models detecting building extensions, construction, and demolitions from multi-year orthophotos; integrated into GIS web validation platform (88% accuracy, 65% manual inspection reduction).", "bullet"),
+        para("• <b>3D CityGML Modeling & Texture Projection:</b> Built automated 3D CityGML reconstruction and occlusion-aware multi-view texture projection from aerial imagery, maintaining texture displacement &lt; 3 pixels.", "bullet"),
+        para("• <b>Orthophoto Automation & Camera Pose Estimation:</b> Created AI image QA (cloud/shadow/blur detection, 97% accuracy), PostGIS/AHN LiDAR seamline optimization (65% edit reduction), and camera pose estimation (2px accuracy, 90% manual AT reduction).", "bullet"),
+        
         para("PEER-REVIEWED PUBLICATION", "heading"),
-        para('Tasnim Sakib Apon, <b>Mohammad Mahmudul Hasan</b>, Abrar Islam, and Md. Golam Rabiul Alam. “Demystifying Deep Learning Models for Retinal OCT Disease Classification using Explainable AI.” <i>2021 IEEE Asia-Pacific Conference on Computer Science and Data Engineering (CSDE)</i>. <link href="https://doi.org/10.1109/CSDE53843.2021.9718400" color="#176c5b">doi:10.1109/CSDE53843.2021.9718400</link>.'),
-        para("SELECTED RESEARCH AND PROJECTS", "heading"),
-        para("<b>EEG undergraduate thesis:</b> signal analysis related to impaired consciousness and coma."),
-        para("<b>Building change and mapping:</b> interpretation of construction, demolition and extensions from multi-year orthophotos; GIS digitization from imagery."),
-        para('<b>Traffic detection:</b> earlier 21-label computer-vision project with a <link href="https://github.com/fahome10bd/Multi-Label-Vehicle-detection-based-on-AI" color="#176c5b">public repository</link>.'),
-        para("TECHNICAL AREAS AND LANGUAGE", "heading"),
-        para("Computer vision; GIS; algorithm development; system design; photogrammetric workflows; point-cloud alignment and classification; signal analysis; Python; MATLAB."),
-        para("Bangla: native. English-medium instruction certificate available. IELTS pending.", "small"),
+        para('Tasnim Sakib Apon, <b>Mohammad Mahmudul Hasan</b>, Abrar Islam, and Md. Golam Rabiul Alam. “Demystifying Deep Learning Models for Retinal OCT Disease Classification using Explainable AI.” <i>2021 IEEE Asia-Pacific Conference on CSDE</i>. <link href="https://doi.org/10.1109/CSDE53843.2021.9718400" color="#146b58">doi:10.1109/CSDE53843.2021.9718400</link>.'),
+        
+        para("HONORS & SELECTED PROJECTS", "heading"),
+        para("<b>Awards:</b> Excellent Performer (2024) & Borsho Shera (Best Performer of the Year 2022), HawarIT &nbsp;·&nbsp; 2nd Place, International Innovation Tender (Sentinel Earth Observation) &nbsp;·&nbsp; 1st Place, MATLAB Competition, AUST &nbsp;·&nbsp; Top 15, Dhaka.AI Deep Learning Competition."),
+        para("<b>Earth Observation:</b> Sentinel multispectral AI for crop classification, water quality, and algae bloom detection. <b>Fault Detection:</b> Accelerometer signal processing in MATLAB. <b>Astrophysics:</b> WMAP CMBR primordial signal isolation and sky-map generation."),
+        
+        para("TECHNICAL SKILLS & REFERENCES", "heading"),
+        para("<b>Skills:</b> Python, SQL, C, MATLAB &nbsp;|&nbsp; PyTorch, TensorFlow, OpenCV, YOLO, FastAPI &nbsp;|&nbsp; GDAL, GeoPandas, PostGIS, QGIS, CityGML &nbsp;|&nbsp; Open3D, PCL, COLMAP, Gaussian Splatting."),
+        para("<b>Referees:</b> Mirza Fuad Adnan (Asst. Prof., IUT, adnan152616@gmail.com) &nbsp;·&nbsp; Md. Thesun Al-Amin (Asst. Prof., IUT, thesun.eee@gmail.com) &nbsp;·&nbsp; Kaisar Imam (CTO, HawarIT, k.imam@hawarIT.com).", "small"),
     ]
 
-    doc = SimpleDocTemplate(str(OUTPUT), pagesize=A4, leftMargin=18 * mm, rightMargin=18 * mm, topMargin=16 * mm, bottomMargin=18 * mm, title="Mohammad Mahmudul Hasan Academic CV", author="Mohammad Mahmudul Hasan")
-    doc.build(body)
-    print(OUTPUT)
+    doc = SimpleDocTemplate(
+        str(OUTPUT),
+        pagesize=A4,
+        leftMargin=14 * mm,
+        rightMargin=14 * mm,
+        topMargin=12 * mm,
+        bottomMargin=12 * mm,
+        title="Mohammad Mahmudul Hasan Academic CV",
+        author="Mohammad Mahmudul Hasan"
+    )
+    
+    # We will build and check page count
+    test_canvas = PageCountCanvas
+    doc.build(body, canvasmaker=test_canvas)
+    print(f"Generated {OUTPUT}")
 
 
 if __name__ == "__main__":

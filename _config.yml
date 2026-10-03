@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Mohammad Mahmudul Hasan"
 title_separator          : "-"
 name                     : &name "Mohammad Mahmudul Hasan"
-description              : &description "Research portfolio in geospatial AI, computer vision, photogrammetry and biomedical signal processing"
+description              : &description "Research portfolio in Geospatial AI, 3D Urban Modeling, Point Cloud Intelligence & Autonomous Digital Twins"
 url                      : https://fahome10bd.github.io
 baseurl                  : ""
 repository               : "fahome10bd/fahome10bd.github.io"
@@ -25,11 +25,11 @@ author:
   avatar           :
   name             : "Mohammad Mahmudul Hasan"
   pronouns         : # example: "she/her"  
-  bio              : "AI engineering team lead | Computer vision, GIS and photogrammetry"
-  location         : "Bangladesh"
+  bio              : "Project Lead, AI Engineer | GeoAI, 3D Urban Modeling & Point Clouds"
+  location         : "Dhaka, Bangladesh"
   employer         : "HawarIT Limited"
   uri              : # URL
-  email            :
+  email            : "mahmudul18@iut-dhaka.edu"
 
   # Academic websites
   academia         : # URL
@@ -41,7 +41,7 @@ author:
   semantic         : # URL
   ssrn             : # URL
   pubmed           :
-  researchgate     : # URL
+  researchgate     : "https://www.researchgate.net/profile/Mohammad-Mahmudul-Hasan"
   scopus           : # URL
   zotero           : # URL
 

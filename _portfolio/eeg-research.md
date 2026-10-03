@@ -1,13 +1,18 @@
 ---
-title: "EEG analysis of impaired consciousness"
+title: "Locomotive features in EEG of impaired consciousness"
 collection: portfolio
 order: 6
 permalink: /portfolio/eeg-research/
-excerpt: "Undergraduate thesis research using EEG signal analysis in the context of impaired consciousness and coma."
+excerpt: "Undergraduate thesis at IUT on analyzing EEG time-series signals and distinctive cerebral rhythms in impaired consciousness (coma)."
 ---
 
-My undergraduate Electrical and Electronic Engineering thesis at the Islamic University of Technology investigated EEG signals related to impaired consciousness and coma. It established my interest in extracting interpretable information from physiological signals.
+My undergraduate B.Sc. thesis in Electrical and Electronic Engineering at the Islamic University of Technology (IUT) investigated:
 
-I am interested in robust EEG analysis across people and recording conditions. Sleep-state analysis is a related research interest; sleep and disorders of consciousness require different data and evaluation.
+**"Quantifying Locomotive Features in EEG of Impaired Consciousness (Coma) with Distinctive Cerebral Rhythms"**
 
-[Biomedical research direction]({{ '/research/#biomedical-signal-processing' | relative_url }})
+### Methodology & Findings
+- **Signal Analysis:** Analyzed clinical EEG time-series signals to identify discriminative spectral and temporal features characterizing depths of consciousness and coma states.
+- **Rhythm Decomposition:** Extracted distinctive cerebral rhythms across patient recordings, developing algorithmic criteria to evaluate rhythmic variability and state transitions.
+- **Academic Distinction:** Evaluated under both Project and Thesis courses at IUT, receiving the highest grade of **A+** for research rigor.
+
+[Research Interests: Biomedical Signal Processing]({{ '/research/#biomedical-signal-processing' | relative_url }})

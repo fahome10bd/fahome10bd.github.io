@@ -1,13 +1,16 @@
 ---
-title: "Traffic-sign assessment from 360-degree imagery"
+title: "Street-view GeoAI and asset localization"
 collection: portfolio
 order: 5
 permalink: /portfolio/traffic-sign-inspection/
-excerpt: "Computer-vision work using car-captured 360-degree imagery to review faulty or missing traffic signs."
+excerpt: "End-to-end GeoAI pipeline for detection and geospatial localization of 130 traffic sign and 33 street furniture classes from 360° street imagery."
 ---
 
-I have worked with 360-degree imagery captured from a car to review traffic signs, including condition and possible missing assets. The task requires attention to viewpoint, visibility and image quality as well as sign recognition.
+At HawarIT Limited, I engineered a comprehensive end-to-end GeoAI system for automated detection, classification, and geospatial localization of road and roadside infrastructure from car-mounted 360° street-view imagery.
 
-An expected sign cannot be established as missing from a single image alone; a reference asset inventory or comparable observations are needed. I am interested in visual systems that show their evidence and flag uncertainty for human review.
+### Technical Implementation & Impact
+- **Asset Detection & Recognition:** Trained and optimized custom YOLOv5 models capable of recognizing **130 distinct traffic sign categories** and **33 street furniture classes** under varying lighting, weather, and occlusions.
+- **Geospatial Localization & Tracking:** Implemented custom multi-object tracking and triangulation algorithms to compute high-precision world coordinates for detected assets directly from vehicle GPS and camera trajectory telemetry.
+- **Quantitative Results:** Delivered **>95% object detection accuracy** and **92% geospatial localization precision**, transforming raw street video logs into structured, GIS-ready asset inventories.
 
-[Computer vision research direction]({{ '/research/#computer-vision-and-vision-language-systems' | relative_url }})
+[Research Interests: Point Cloud Intelligence & Spatial Understanding]({{ '/research/#4-point-cloud-intelligence--spatial-understanding' | relative_url }})

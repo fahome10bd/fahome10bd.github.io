@@ -1,13 +1,16 @@
 ---
-title: "GIS digitization from orthophotos"
+title: "Large-scale 3D CityGML modeling and texture projection"
 collection: portfolio
 order: 4
 permalink: /portfolio/gis-digitization/
-excerpt: "Connecting orthophoto interpretation with structured geographic features and map review."
+excerpt: "Automated pipeline for 3D CityGML reconstruction and photorealistic texture generation from high-resolution aerial imagery."
 ---
 
-I have worked on digitization from orthophotos, turning image observations into mapped features that can be reviewed and used in GIS workflows. This connects imagery production to the final spatial information a project needs.
+At HawarIT Limited, I built an automated pipeline for large-scale 3D CityGML reconstruction and photorealistic texture generation from high-resolution aerial surveys.
 
-My research interest is in AI-assisted map updating that saves review effort while preserving geometric and topological quality.
+### Technical Implementation & Impact
+- **Automated 3D Reconstruction:** Developed algorithms converting 2D footprint geometries and elevation models into semantic 3D CityGML building representations at scale.
+- **Occlusion-Aware Multi-View Texture Projection:** Designed custom texture projection algorithms that dynamically evaluate viewing angles, occlusions, and image resolution to project aerial imagery onto 3D building facades.
+- **Quantitative Results:** Maintained strict geometric alignment with a **texture shift of less than 3 pixels**, generating high-fidelity photorealistic urban digital twin models for municipal planning.
 
-[Research interests]({{ '/research/#geospatial-ai-and-gis' | relative_url }})
+[Research Interests: Intelligent 3D Spatial Modeling & Digital Twins]({{ '/research/#2-intelligent-3d-spatial-modeling--digital-twins' | relative_url }})
