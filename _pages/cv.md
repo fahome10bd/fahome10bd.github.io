@@ -293,7 +293,8 @@ redirect_from:
   <div class="mcv-entry">
     <div class="mcv-entry-left">Thesis</div>
     <div class="mcv-entry-right">
-      <em>Quantifying Locomotive Features in EEG of Impaired Consciousness (Coma) with Distinctive Cerebral Rhythms</em>. Analyzed EEG time-series signals to identify discriminative features related to consciousness levels.
+      <em>Quantifying the Locomotive Features in EEG of Impaired Consciousness and Coma with Distinctive Cerebral Rhythms</em> (Supervisor: Prof. Dr. Md. Ruhul Amin). Analyzed clinical EEG time-series signals to extract discriminative neurophysiological features across consciousness depths.
+      [<a href="https://repository.iutoic-dhaka.edu/items/e79be58c-22b4-4817-9329-05b0915d8160" target="_blank" rel="noopener noreferrer">IUT Repository</a>] &middot; [<a href="{{ '/files/Mohammad_Mahmudul_Hasan_BSc_Thesis.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Thesis PDF</a>]
     </div>
   </div>
   <div class="mcv-entry">

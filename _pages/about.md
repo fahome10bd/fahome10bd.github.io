@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am the **Project Lead in the AI Department at [HawarIT Limited](https://www.hawarit.com)**, where I lead multidisciplinary teams developing AI-driven solutions for large-scale geospatial automation and spatial intelligence. Prior to this, I served as Senior AI Engineer and ML Engineer at HawarIT. I graduated with a B.Sc. in Electrical and Electronic Engineering (EEE) from the **Islamic University of Technology (IUT)** in 2021 with a CGPA of **3.76/4.00 (First Class Honours)**.
+I am the **Project Lead in the AI Department at [HawarIT Limited](https://www.hawarit.com)**, where I lead multidisciplinary teams developing AI-driven solutions for large-scale geospatial automation and spatial intelligence. Prior to this, I served as Senior AI Engineer and ML Engineer at HawarIT. I graduated with a B.Sc. in Electrical and Electronic Engineering (EEE) from the **Islamic University of Technology (IUT)** in 2021 with a CGPA of **3.76/4.00 (First Class Honours)**. My undergraduate thesis was on neurophysiological signal analysis: *Quantifying the Locomotive Features in EEG of Impaired Consciousness and Coma with Distinctive Cerebral Rhythms* [[IUT Repository](https://repository.iutoic-dhaka.edu/items/e79be58c-22b4-4817-9329-05b0915d8160)] &middot; [[Thesis PDF]({{ '/files/Mohammad_Mahmudul_Hasan_BSc_Thesis.pdf' | relative_url }})].
 
 My transition from Electrical and Electronic Engineering to Geospatial AI was driven by a core realization: while hardware enables sensors to capture the physical world, intelligent algorithms allow us to understand, reconstruct, and reason about it.
 

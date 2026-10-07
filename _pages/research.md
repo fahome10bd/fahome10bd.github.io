@@ -61,7 +61,7 @@ Extracting actionable semantic and geometric intelligence from dense, unorganize
 
 Alongside geospatial intelligence, I maintain a strong foundation in physiological signal analysis and interpretable medical AI:
 
-* **Undergraduate Thesis (IUT):** *Quantifying Locomotive Features in EEG of Impaired Consciousness (Coma) with Distinctive Cerebral Rhythms*. Conducted time-series analysis on clinical EEG signals to identify discriminative spectral and temporal features characterizing depths of consciousness and coma states.
+* **Undergraduate Thesis (IUT):** *Quantifying the Locomotive Features in EEG of Impaired Consciousness and Coma with Distinctive Cerebral Rhythms* (Supervised by Prof. Dr. Md. Ruhul Amin, Dept. of EEE, IUT). Conducted time-series spectral and temporal analysis on clinical EEG signals to identify discriminative neurophysiological features characterizing depths of consciousness and comatose states. [[IUT Institutional Repository](https://repository.iutoic-dhaka.edu/items/e79be58c-22b4-4817-9329-05b0915d8160)] · [[Download Thesis PDF]({{ '/files/Mohammad_Mahmudul_Hasan_BSc_Thesis.pdf' | relative_url }})]
 * **Explainable Medical Imaging:** Co-authored peer-reviewed research on explainable deep learning models for retinal Optical Coherence Tomography (OCT) disease classification (*IEEE CSDE 2021*), demystifying neural network decision boundaries for clinical validation.
 
 ---
