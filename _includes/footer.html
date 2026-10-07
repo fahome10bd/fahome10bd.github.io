@@ -1,12 +1,12 @@
 {% include base_path %}
 
 <div class="page__footer-copyright">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }} &middot; {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a> &middot; <a href="{{ base_path }}/sitemap.xml">{{ site.data.ui-text[site.locale].site_map | default: "Sitemap" }}</a>
+  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }} &middot; {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>
 </div>
 
-{% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
 <div class="page__footer-follow">
   <ul class="social-icons">
+    <li><a href="{{ base_path }}/sitemap.xml">{{ site.data.ui-text[site.locale].site_map | default: "Sitemap" }}</a></li>
     {% if site.author.github %}
       <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
     {% endif %}
@@ -18,5 +18,4 @@
     {% endif %}
   </ul>
 </div>
-{% endif %}
 

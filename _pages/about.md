@@ -11,6 +11,11 @@ I am the **Project Lead in the AI Department at [HawarIT Limited](https://www.ha
 
 My transition from Electrical and Electronic Engineering to Geospatial AI was driven by a core realization: while hardware enables sensors to capture the physical world, intelligent algorithms allow us to understand, reconstruct, and reason about it.
 
+<div style="margin: 1.2em 0 1.6em 0; display: flex; gap: 0.6em; flex-wrap: wrap;">
+  <a href="{{ '/files/Mohammad_Mahmudul_Hasan_Academic_CV.pdf' | relative_url }}" class="btn btn--primary" style="margin: 0; display: inline-flex; align-items: center; gap: 0.4em;"><i class="fas fa-file-pdf"></i> Download Academic CV (PDF)</a>
+  <a href="{{ '/research/' | relative_url }}" class="btn btn--inverse" style="margin: 0; display: inline-flex; align-items: center; gap: 0.4em;"><i class="fas fa-compass"></i> Research Framework</a>
+</div>
+
 ## Research Vision & Focus
 
 My research objective is to advance **3D Urban Modeling** and develop an **Autonomous GIS Framework** by integrating **Geospatial AI (GeoAI)** with high-fidelity reconstruction techniques:
