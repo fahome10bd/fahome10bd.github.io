@@ -1,0 +1,3 @@
+# Only the downloadable CV renderer needs an additional dependency.
+# The local content editor itself uses the Python standard library.
+reportlab>=4,<6

@@ -7,41 +7,47 @@ redirect_from:
   - /about.html
 ---
 
-I am the **Project Lead in the AI Department at [HawarIT Limited](https://www.hawarit.com)**, where I lead multidisciplinary teams developing AI-driven solutions for large-scale geospatial automation and spatial intelligence. Prior to this, I served as Senior AI Engineer and ML Engineer at HawarIT. I graduated with a B.Sc. in Electrical and Electronic Engineering (EEE) from the **Islamic University of Technology (IUT)** in 2021 with a CGPA of **3.76/4.00 (First Class Honours)**. My undergraduate thesis was on neurophysiological signal analysis: *Quantifying the Locomotive Features in EEG of Impaired Consciousness and Coma with Distinctive Cerebral Rhythms* [[IUT Repository](https://repository.iutoic-dhaka.edu/items/e79be58c-22b4-4817-9329-05b0915d8160)] &middot; [[Thesis PDF]({{ '/files/Mohammad_Mahmudul_Hasan_BSc_Thesis.pdf' | relative_url }})].
+I am the **Project Lead in the AI Department at [HawarIT Limited](https://www.hawarit.com/)**, where I lead multidisciplinary teams developing AI-driven solutions for large-scale geospatial automation and spatial intelligence. Prior to this, I served as Senior AI Engineer and ML Engineer at HawarIT. I graduated with a B.Sc. in Electrical and Electronic Engineering (EEE) from the **Islamic University of Technology (IUT)** in 2021 with a CGPA of **3.76/4.00 (First Class Honours)**. My undergraduate thesis was on neurophysiological signal analysis: *Quantifying the Locomotive Features in EEG of Impaired Consciousness and Coma with Distinctive Cerebral Rhythms* [[IUT Repository](https://repository.iutoic-dhaka.edu/items/e79be58c-22b4-4817-9329-05b0915d8160)] · [[Thesis PDF]({{ '/files/Mohammad_Mahmudul_Hasan_BSc_Thesis.pdf' | relative_url }})].
 
 My transition from Electrical and Electronic Engineering to Geospatial AI was driven by a core realization: while hardware enables sensors to capture the physical world, intelligent algorithms allow us to understand, reconstruct, and reason about it.
 
-<div style="margin: 1.2em 0 1.6em 0; display: flex; gap: 0.6em; flex-wrap: wrap;">
-  <a href="{{ '/files/Mohammad_Mahmudul_Hasan_Academic_CV.pdf' | relative_url }}" class="btn btn--primary" style="margin: 0; display: inline-flex; align-items: center; gap: 0.4em;"><i class="fas fa-file-pdf"></i> Download Academic CV (PDF)</a>
-  <a href="{{ '/research/' | relative_url }}" class="btn btn--inverse" style="margin: 0; display: inline-flex; align-items: center; gap: 0.4em;"><i class="fas fa-compass"></i> Research Framework</a>
+<div class="academic-actions">
+  <a href="{{ '/files/Mohammad_Mahmudul_Hasan_Academic_CV.pdf' | relative_url }}" class="btn btn--primary"><strong>Download Academic CV (PDF)</strong></a>
 </div>
 
-## Research Vision & Focus
+## Research interests
 
-My research objective is to advance **3D Urban Modeling** and develop an **Autonomous GIS Framework** by integrating **Geospatial AI (GeoAI)** with high-fidelity reconstruction techniques:
+- **3D spatial intelligence:** Semantic understanding of point clouds and urban scenes, with structured CAD/BIM extraction.
+- **Urban reconstruction and digital twins:** Connecting photogrammetry and CityGML with neural rendering, including proposed work on 3D Gaussian Splatting.
+- **Geospatial automation and change detection:** Reliable processing of aerial imagery and multi-temporal observations for GIS workflows.
 
-* **Autonomous Digital Twins:** Leveraging **3D Gaussian Splatting** and **CityGML** to automate the reconstruction and photorealistic texture generation of large-scale city models.
-* **Spatial Intelligence:** Refining **Point Cloud Analytics** and **Computer Vision** pipelines for semantic segmentation, automated BIM extraction, and sub-pixel camera pose estimation.
-* **Multi-Temporal Change Detection:** Developing robust deep learning models to identify construction, demolition, and infrastructure evolution from multi-year orthophotos and satellite imagery.
-* **Autonomous GIS Systems:** Bridging the gap between remote sensing, photogrammetry, and real-time spatial data automation to eliminate semi-automated bottlenecks in spatial production workflows.
+[Explore my research directions]({{ '/research/' | relative_url }})
 
-Explore my detailed research framework:
-- [Orthophoto Pipeline Automation]({{ '/research/#1-orthophoto-pipeline-automation' | relative_url }})
-- [Intelligent 3D Spatial Modeling & Digital Twins]({{ '/research/#2-intelligent-3d-spatial-modeling--digital-twins' | relative_url }})
-- [Remote Sensing & Spatiotemporal Change Detection]({{ '/research/#3-remote-sensing--spatiotemporal-change-detection' | relative_url }})
-- [Point Cloud Intelligence & Spatial Understanding]({{ '/research/#4-point-cloud-intelligence--spatial-understanding' | relative_url }})
-- [All Research Directions]({{ '/research/' | relative_url }})
+## Selected projects
 
-## Peer-Reviewed Publication
+{% assign project_order = site.portfolio | sort: 'order' %}
+{% assign featured_count = 0 %}
+{% for item in project_order %}
+  {% assign project = site.data.projects[item.content_key] %}
+  {% if project.featured and featured_count < 3 %}
+<div class="selected-project">
+  <h3><a href="{{ item.url | relative_url }}">{{ project.title | escape }}</a></h3>
+  <p>{{ project.summary | escape }}</p>
+</div>
+    {% assign featured_count = featured_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
 
-**Tasnim Sakib Apon, Mohammad Mahmudul Hasan, Abrar Islam, and Md. Golam Rabiul Alam.** “Demystifying Deep Learning Models for Retinal OCT Disease Classification using Explainable AI.” *2021 IEEE Asia-Pacific Conference on Computer Science and Data Engineering (CSDE)*. [DOI: 10.1109/CSDE53843.2021.9718400](https://doi.org/10.1109/CSDE53843.2021.9718400). [Publication details]({{ '/publications/' | relative_url }}).
+[See all projects]({{ '/portfolio/' | relative_url }})
 
-## Selected Technical & Research Work
+## Peer-reviewed publication
 
-- [Multi-Temporal Change Detection]({{ '/portfolio/building-change/' | relative_url }}) — Deep learning change detection from multi-year orthophotos integrated into a GIS platform (88% accuracy, 65% inspection time reduction).
-- [3D Point Cloud Intelligence & BIM Extraction]({{ '/portfolio/point-cloud-processing/' | relative_url }}) — Semantic segmentation and BIM extraction from aerial, mobile, and indoor LiDAR (95% extraction accuracy, 60% manual time reduction).
-- [Orthophoto Production & AI QA]({{ '/portfolio/orthophoto-production/' | relative_url }}) — AI quality assessment (97% accuracy), PostGIS/AHN seamline optimization, and camera pose estimation (2px accuracy, 90% AT effort reduction).
-- [360° Street-View GeoAI Localization]({{ '/portfolio/traffic-sign-inspection/' | relative_url }}) — Automated detection and localization of 130 traffic sign and 33 furniture classes (>95% detection accuracy, 92% localization precision).
-- [3D CityGML Modeling & Texture Projection]({{ '/portfolio/gis-digitization/' | relative_url }}) — Automated 3D CityGML reconstruction and occlusion-aware multi-view texture projection maintaining texture shift < 3 pixels.
+Tasnim Sakib Apon, **Mohammad Mahmudul Hasan**, Abrar Islam, and Md. Golam Rabiul Alam. “Demystifying Deep Learning Models for Retinal OCT Disease Classification using Explainable AI.” *IEEE CSDE, 2021*.
 
-[See all projects]({{ '/portfolio/' | relative_url }}) · [Read my CV]({{ '/cv/' | relative_url }}) · [Download CV PDF]({{ '/files/Mohammad_Mahmudul_Hasan_Academic_CV.pdf' | relative_url }})
+[Publication details]({{ '/publication/retinal-oct-explainable-ai/' | relative_url }}) · [DOI](https://doi.org/10.1109/CSDE53843.2021.9718400) · [Author preprint](https://arxiv.org/abs/2111.03890)
+
+## Contact
+
+For research discussions and graduate opportunities: [mahmudul18@iut-dhaka.edu](mailto:mahmudul18@iut-dhaka.edu).
+
+[Online CV]({{ '/cv/' | relative_url }}) · [GitHub](https://github.com/fahome10bd) · [LinkedIn](https://www.linkedin.com/in/fahome10bd/)

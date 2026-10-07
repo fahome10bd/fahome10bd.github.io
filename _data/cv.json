@@ -1,0 +1,171 @@
+{
+  "first_name": "Mohammad",
+  "last_name": "Mahmudul Hasan",
+  "subtitle": "Project Lead, AI Department · HawarIT Limited",
+  "contact": [
+    {
+      "text": "Dhaka, Bangladesh",
+      "url": ""
+    },
+    {
+      "text": "+8801521434403",
+      "url": "tel:+8801521434403"
+    },
+    {
+      "text": "mahmudul18@iut-dhaka.edu",
+      "url": "mailto:mahmudul18@iut-dhaka.edu"
+    },
+    {
+      "text": "fahome10bd.github.io",
+      "url": "https://fahome10bd.github.io/"
+    },
+    {
+      "text": "GitHub: fahome10bd",
+      "url": "https://github.com/fahome10bd"
+    },
+    {
+      "text": "LinkedIn: fahome10bd",
+      "url": "https://www.linkedin.com/in/fahome10bd/"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Research Interests",
+      "page": 1,
+      "rows": [
+        {
+          "label": "",
+          "body": "Geospatial AI; 3D scene understanding and point cloud analytics; urban reconstruction and digital twins; autonomous GIS workflows and spatiotemporal change detection."
+        }
+      ]
+    },
+    {
+      "title": "Education",
+      "page": 1,
+      "rows": [
+        {
+          "label": "2017–2021",
+          "body": "<b>B.Sc. in Electrical and Electronic Engineering</b><br/>Islamic University of Technology (IUT), Bangladesh.<br/>CGPA: <b>3.76/4.00</b>, first class honours."
+        },
+        {
+          "label": "Thesis",
+          "body": "<i>Quantifying Locomotive Features in EEG of Impaired Consciousness (Coma) with Distinctive Cerebral Rhythms.</i> Analyzed EEG time series and cerebral rhythms. A+ in Project and Thesis courses. <a href=\"https://repository.iutoic-dhaka.edu/items/e79be58c-22b4-4817-9329-05b0915d8160\">IUT repository</a>."
+        }
+      ]
+    },
+    {
+      "title": "Peer-Reviewed Publication",
+      "page": 1,
+      "rows": [
+        {
+          "label": "2021",
+          "body": "Tasnim Sakib Apon, <b>Mohammad Mahmudul Hasan</b>, Abrar Islam, and Md. Golam Rabiul Alam. “Demystifying Deep Learning Models for Retinal OCT Disease Classification using Explainable AI.” <i>2021 IEEE Asia-Pacific Conference on Computer Science and Data Engineering (CSDE).</i><br/><a href=\"https://doi.org/10.1109/CSDE53843.2021.9718400\">DOI: 10.1109/CSDE53843.2021.9718400</a> · <a href=\"https://arxiv.org/abs/2111.03890\">Author preprint</a>."
+        }
+      ]
+    },
+    {
+      "title": "Professional Experience",
+      "page": 1,
+      "rows": [
+        {
+          "label": "2024–Present",
+          "body": "<b>Project Lead, AI Department</b> · HawarIT Limited.<br/>Lead multidisciplinary teams delivering AI and geospatial automation systems."
+        },
+        {
+          "label": "2023–2024",
+          "body": "<b>Senior AI Engineer</b> · HawarIT Limited.<br/>Developed AI systems for photogrammetry, point cloud analytics, and spatial automation."
+        },
+        {
+          "label": "2021–2023",
+          "body": "<b>ML Engineer</b> · HawarIT Limited.<br/>Built machine learning and computer vision pipelines for geospatial applications."
+        }
+      ]
+    },
+    {
+      "title": "Selected Technical and Research Projects",
+      "page": 2,
+      "rows": [
+        {
+          "label": "Point clouds",
+          "body": "Developed LiDAR semantic segmentation and automated pipe/geometry extraction across aerial, mobile, and indoor datasets: 95% extraction accuracy and 60% less manual processing time."
+        },
+        {
+          "label": "Change detection",
+          "body": "Developed multi-temporal building change detection and integrated GIS validation: 88% accuracy and 65% less manual inspection."
+        },
+        {
+          "label": "Orthophoto QA",
+          "body": "Automated cloud/shadow/blur assessment (97% accuracy), PostGIS/AHN seamline refinement (65% less editing), and camera alignment (2-pixel accuracy; 90% less manual aerial triangulation effort)."
+        },
+        {
+          "label": "Street-view GeoAI",
+          "body": "Developed YOLOv5 and tracking pipelines for 130 traffic sign and 33 street furniture classes: detection accuracy above 95% and localization precision of 92%."
+        },
+        {
+          "label": "3D city models",
+          "body": "Built CityGML reconstruction and occlusion-aware multi-view aerial texture projection, maintaining reported texture displacement below 3 pixels."
+        },
+        {
+          "label": "Remote sensing",
+          "body": "Applied Sentinel multispectral analytics to crop classification, water quality, and algae bloom detection. The framework placed second in an international innovation tender."
+        }
+      ]
+    },
+    {
+      "title": "Technical Skills",
+      "page": 2,
+      "rows": [
+        {
+          "label": "Programming",
+          "body": "Python, SQL, JavaScript, C, MATLAB, R."
+        },
+        {
+          "label": "AI and vision",
+          "body": "PyTorch, TensorFlow, OpenCV, YOLO, FastAPI."
+        },
+        {
+          "label": "Geospatial",
+          "body": "GDAL, GeoPandas, PostgreSQL/PostGIS, QGIS, ArcGIS."
+        },
+        {
+          "label": "3D and LiDAR",
+          "body": "Open3D, PCL, COLMAP, OpenMVS, CloudCompare."
+        }
+      ]
+    },
+    {
+      "title": "Awards and Honors",
+      "page": 2,
+      "rows": [
+        {
+          "label": "2024 / 2022",
+          "body": "Excellent Performer (2024); Borsho Shera, Best Performer of the Year (2022), HawarIT Limited."
+        },
+        {
+          "label": "Selected awards",
+          "body": "2nd place, International Innovation Tender; 1st place, MATLAB Competition, AUST; Top 15, Dhaka.AI Deep Learning Competition; 1st prize, Nuclear Power Seminar, AUST; Government Merit Scholarship, HSC."
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Mirza Fuad Adnan",
+      "title": "Assistant Professor",
+      "organization": "Dept. of EEE, IUT",
+      "email": "adnan152616@gmail.com"
+    },
+    {
+      "name": "Md. Thesun Al-Amin",
+      "title": "Assistant Professor",
+      "organization": "Dept. of EEE, IUT",
+      "email": "thesun.eee@gmail.com"
+    },
+    {
+      "name": "Kaisar Imam",
+      "title": "Chief Technology Officer",
+      "organization": "HawarIT Limited",
+      "email": "k.imam@hawarIT.com"
+    }
+  ]
+}

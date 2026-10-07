@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio editor · Mohammad Mahmudul Hasan</title>
+  <link rel="stylesheet" href="/editor/editor.css">
+  <script src="/editor/editor.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <div><p class="eyebrow">Mohammad Mahmudul Hasan</p><h1>Portfolio editor</h1><p class="header-note">Research and project content</p></div>
+    <div class="toolbar">
+      <button id="import-word" type="button">Import Word folders</button>
+      <button id="save" class="primary" type="button">Save changes</button>
+      <button id="build" type="button">Save &amp; rebuild preview</button>
+      <a id="preview-link" href="/preview/" target="_blank" rel="noopener">Open site preview ↗</a>
+    </div>
+  </header>
+  <p id="status" class="status" role="status" aria-live="polite">Loading your portfolio…</p>
+  <div class="app-layout">
+    <aside class="library" aria-label="Content library">
+      <div class="tabs" role="group" aria-label="Content type">
+        <button id="projects-tab" class="active" type="button" aria-pressed="true">Projects</button>
+        <button id="research-tab" type="button" aria-pressed="false">Research</button>
+      </div>
+      <nav id="item-list" aria-label="Choose an item"></nav>
+      <button id="add-item" class="add-item" type="button">+ Add project</button>
+      <p class="library-note">Images and text use the same formatting across the site. Homepage highlights follow the first three featured projects.</p>
+    </aside>
+    <main class="editor-main">
+      <div class="editor-heading"><div><p id="item-kind" class="eyebrow">Project</p><h2 id="item-heading">Choose an item</h2></div><span id="saved-state" class="saved-state">Saved</span></div>
+      <form id="editor-form">
+        <fieldset id="editor-fields">
+          <div id="intro-field" hidden></div>
+          <div id="metadata" class="metadata"></div>
+          <div class="blocks-heading"><div><h3>Content blocks</h3><p>Arrange text and images in the order you want readers to see them.</p></div><div class="block-actions"><button id="add-text" type="button">+ Text block</button><button id="add-image" type="button">+ Image block</button></div></div>
+          <div id="blocks"></div>
+          <div class="item-footer"><button id="remove-item" class="danger" type="button">Remove this item</button><p>Each save keeps a local backup of the previous content.</p></div>
+        </fieldset>
+      </form>
+      <details class="help"><summary>Formatting and image tips</summary><p>Text supports Markdown: <code>**bold**</code>, <code>*italic*</code>, <code>- list item</code>, and <code>[link text](https://example.com)</code>. Separate paragraphs with a blank line.</p><p>Upload PNG, JPEG, WebP, or GIF images, up to 15 MB each. Add a short image description for accessibility and a caption explaining what the image shows. Full width follows the text column; medium width centres a smaller image.</p><p>Save &amp; rebuild preview includes your changes in the actual website preview. Saving does not publish the site.</p></details>
+      <details id="build-details" class="build-details" hidden><summary>Preview build details</summary><pre id="build-log"></pre></details>
+    </main>
+  </div>
+</body>
+</html>

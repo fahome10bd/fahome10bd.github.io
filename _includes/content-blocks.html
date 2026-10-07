@@ -1,0 +1,13 @@
+{% for block in include.blocks %}
+  {% if block.type == 'text' %}
+    <section class="content-block content-block--text">
+      {% if block.heading and block.heading != '' %}<h3>{{ block.heading | escape }}</h3>{% endif %}
+      {{ block.body | markdownify }}
+    </section>
+  {% elsif block.type == 'image' and block.src != '' %}
+    <figure class="content-block content-figure content-figure--{{ block.size | default: 'full' | escape }}">
+      <img src="{{ block.src | relative_url }}" alt="{{ block.alt | escape }}" loading="lazy" decoding="async">
+      {% if block.caption and block.caption != '' %}<figcaption>{{ block.caption | escape }}</figcaption>{% endif %}
+    </figure>
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,13 @@
+---
+layout: single
+---
+{% assign project = site.data.projects[page.content_key] %}
+<p class="project-summary">{{ project.summary | escape }}</p>
+<div class="project-meta">
+  <span>{{ project.context | escape }}</span>
+  {% if project.role and project.role != '' %}<span>{{ project.role | escape }}</span>{% endif %}
+</div>
+{% include content-blocks.html blocks=project.blocks %}
+{% if project.research_anchor and project.research_anchor != '' %}
+  <p class="content-next"><a href="{{ '/research/' | relative_url }}#{{ project.research_anchor | escape }}">Related research direction</a> · <a href="{{ '/portfolio/' | relative_url }}">All projects</a></p>
+{% endif %}

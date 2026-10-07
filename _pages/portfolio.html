@@ -5,12 +5,15 @@ permalink: /portfolio/
 author_profile: true
 ---
 
-{% include base_path %}
+<p>Selected professional work in geospatial AI and computer vision, alongside undergraduate research. Each case study describes my contribution, methods, and reported outcomes.</p>
 
-These projects document professional geospatial and computer-vision work, undergraduate research, and an earlier public AI project. Each page distinguishes work completed from a research question I would pursue further.
-
-{% assign ordered_projects = site.portfolio | sort: "order" %}
+{% assign ordered_projects = site.portfolio | sort: 'order' %}
 {% for post in ordered_projects %}
-  {% include archive-single.html %}
+  {% assign project = site.data.projects[post.content_key] %}
+  <article class="project-list-item">
+    <p class="project-context">{{ project.context | escape }}</p>
+    <h2><a href="{{ post.url | relative_url }}">{{ project.title | escape }}</a></h2>
+    <p>{{ project.summary | escape }}</p>
+    <a class="project-read-link" href="{{ post.url | relative_url }}">Read case study <span aria-hidden="true">→</span></a>
+  </article>
 {% endfor %}
-

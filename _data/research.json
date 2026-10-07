@@ -1,0 +1,90 @@
+{
+  "introduction": "My research interests connect geospatial AI, 3D scene understanding, and autonomous spatial data processing. At HawarIT Limited, I have developed systems across aerial imagery, LiDAR, GIS validation, and urban reconstruction. I aim to build on this engineering experience through research into reliable automation and digital twins.",
+  "modules": [
+    {
+      "id": "1-orthophoto-pipeline-automation",
+      "title": "Orthophoto pipeline automation",
+      "summary": "Camera alignment, image quality assessment, and spatial validation for aerial mapping.",
+      "blocks": [
+        {
+          "type": "text",
+          "heading": "Engineering experience",
+          "body": "I developed feature-matching and tie-point workflows for aerial camera alignment, with reported 2-pixel alignment accuracy and a 90% reduction in manual aerial triangulation effort. My image quality assessment work detected cloud, shadow, and blur with reported 97% accuracy. Seamline optimization using PostgreSQL/PostGIS and AHN LiDAR reduced manual editing by 65%."
+        },
+        {
+          "type": "text",
+          "heading": "Research direction",
+          "body": "I would investigate how geometric constraints and image quality models can be combined into a reliable orthophoto production pipeline. Further questions include automated DEM refinement and true-orthophoto validation around building edges, bridges, and elevated structures."
+        }
+      ]
+    },
+    {
+      "id": "2-intelligent-3d-spatial-modeling--digital-twins",
+      "title": "3D spatial modeling and digital twins",
+      "summary": "Structured urban geometry and photorealistic reconstruction from aerial observations.",
+      "blocks": [
+        {
+          "type": "text",
+          "heading": "Engineering experience",
+          "body": "I built automated CityGML reconstruction and multi-view aerial texture projection workflows. View selection and occlusion handling maintained reported texture displacement below 3 pixels."
+        },
+        {
+          "type": "text",
+          "heading": "Research direction",
+          "body": "I am interested in connecting CityGML representations with 3D Gaussian Splatting for photorealistic urban digital twins. Proposed extensions include video-based reconstruction using structure from motion and multi-view stereo, with attention to consistency at city scale."
+        }
+      ]
+    },
+    {
+      "id": "3-remote-sensing--spatiotemporal-change-detection",
+      "title": "Remote sensing and change detection",
+      "summary": "Understanding physical change across multi-temporal aerial and satellite imagery.",
+      "blocks": [
+        {
+          "type": "text",
+          "heading": "Engineering experience",
+          "body": "I developed building change detection for construction, demolition, and extensions from multi-year orthophotos. Integrated into a GIS validation platform, the system achieved reported 88% accuracy and reduced manual inspection by 65%. My Sentinel multispectral analytics work covered crop classification, water quality, and algae bloom detection; the framework placed second in an international innovation tender."
+        },
+        {
+          "type": "text",
+          "heading": "Research direction",
+          "body": "I would investigate how models distinguish physical changes from seasonal variation, lighting, shadows, and sensor differences. A further direction is adapting these methods to post-disaster infrastructure assessment."
+        }
+      ]
+    },
+    {
+      "id": "4-point-cloud-intelligence--spatial-understanding",
+      "title": "Point cloud intelligence and spatial understanding",
+      "summary": "Semantic and geometric understanding of LiDAR and street-view observations.",
+      "blocks": [
+        {
+          "type": "text",
+          "heading": "Engineering experience",
+          "body": "I developed semantic segmentation and pipe/geometry extraction across aerial, mobile, and indoor LiDAR, with reported 95% extraction accuracy and a 60% reduction in manual processing time. My street-view GeoAI pipeline used YOLOv5 and tracking for 130 traffic sign and 33 street furniture classes, with reported detection accuracy above 95% and localization precision of 92%."
+        },
+        {
+          "type": "text",
+          "heading": "Research direction",
+          "body": "I am interested in turning unstructured point clouds and imagery into consistent, semantically annotated CAD/BIM objects for digital twins. Research questions include robust geometric extraction and reliable integration of observations from different acquisition platforms."
+        }
+      ]
+    },
+    {
+      "id": "biomedical-signal-processing",
+      "title": "Biomedical signal processing and explainable AI",
+      "summary": "The academic foundation of my work in signal analysis and interpretable machine learning.",
+      "blocks": [
+        {
+          "type": "text",
+          "heading": "Undergraduate thesis",
+          "body": "*Quantifying Locomotive Features in EEG of Impaired Consciousness (Coma) with Distinctive Cerebral Rhythms.* I analyzed EEG time series and distinctive cerebral rhythms during my B.Sc. at IUT.\n\n[IUT repository](https://repository.iutoic-dhaka.edu/items/e79be58c-22b4-4817-9329-05b0915d8160) · [Thesis PDF](/files/Mohammad_Mahmudul_Hasan_BSc_Thesis.pdf)"
+        },
+        {
+          "type": "text",
+          "heading": "Peer-reviewed work",
+          "body": "I co-authored “Demystifying Deep Learning Models for Retinal OCT Disease Classification using Explainable AI” (IEEE CSDE, 2021), studying retinal OCT classification and LIME-based interpretation.\n\n[Publication details](/publication/retinal-oct-explainable-ai/) · [DOI](https://doi.org/10.1109/CSDE53843.2021.9718400)"
+        }
+      ]
+    }
+  ]
+}

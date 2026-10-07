@@ -1,0 +1,219 @@
+{
+  "building-change": {
+    "title": "Multi-temporal building change detection",
+    "summary": "Deep learning change detection system identifying building extensions, new constructions, and demolitions from multi-year orthophotos.",
+    "context": "Professional work · HawarIT Limited",
+    "role": "AI engineering and system development",
+    "order": 1,
+    "featured": true,
+    "research_anchor": "3-remote-sensing--spatiotemporal-change-detection",
+    "blocks": [
+      {
+        "type": "text",
+        "heading": "My contribution",
+        "body": "At HawarIT Limited, I developed and deployed an automated multi-temporal change detection system using deep learning to identify building extensions, new constructions, and demolitions from multi-year orthophoto surveys."
+      },
+      {
+        "type": "text",
+        "heading": "Deep Learning Architecture",
+        "body": "Designed convolutional neural network pipelines trained on multi-temporal, high-resolution aerial imagery to distinguish actual structural changes from seasonal variations, differing illumination, and sensor viewpoints."
+      },
+      {
+        "type": "text",
+        "heading": "GIS Web Platform Integration",
+        "body": "Integrated the automated detection pipeline into an interactive GIS-based web validation platform for cartographic reviewers."
+      },
+      {
+        "type": "text",
+        "heading": "Quantitative Results",
+        "body": "Achieved **88% detection accuracy** across varied urban landscapes, reducing manual inspection and verification efforts by **65%**."
+      }
+    ]
+  },
+  "eeg-research": {
+    "title": "Locomotive features in EEG of impaired consciousness",
+    "summary": "Undergraduate thesis at IUT on analyzing EEG time-series signals and distinctive cerebral rhythms in impaired consciousness (coma).",
+    "context": "Undergraduate research · IUT",
+    "role": "B.Sc. thesis researcher",
+    "order": 6,
+    "featured": false,
+    "research_anchor": "biomedical-signal-processing",
+    "blocks": [
+      {
+        "type": "text",
+        "heading": "Academic context",
+        "body": "My undergraduate B.Sc. thesis in Electrical and Electronic Engineering at the Islamic University of Technology (IUT) investigated:\n\n**\"Quantifying Locomotive Features in EEG of Impaired Consciousness (Coma) with Distinctive Cerebral Rhythms\"**"
+      },
+      {
+        "type": "text",
+        "heading": "Signal Analysis",
+        "body": "Analyzed clinical EEG time-series signals to identify discriminative spectral and temporal features characterizing depths of consciousness and coma states."
+      },
+      {
+        "type": "text",
+        "heading": "Rhythm Decomposition",
+        "body": "Extracted distinctive cerebral rhythms across patient recordings, developing algorithmic criteria to evaluate rhythmic variability and state transitions."
+      },
+      {
+        "type": "text",
+        "heading": "Academic Distinction",
+        "body": "Evaluated under both Project and Thesis courses at IUT, receiving the highest grade of **A+** for research rigor."
+      }
+    ]
+  },
+  "gis-digitization": {
+    "title": "Large-scale 3D CityGML modeling and texture projection",
+    "summary": "Automated pipeline for 3D CityGML reconstruction and photorealistic texture generation from high-resolution aerial imagery.",
+    "context": "Professional work · HawarIT Limited",
+    "role": "AI engineering and system development",
+    "order": 4,
+    "featured": false,
+    "research_anchor": "2-intelligent-3d-spatial-modeling--digital-twins",
+    "blocks": [
+      {
+        "type": "text",
+        "heading": "My contribution",
+        "body": "At HawarIT Limited, I built an automated pipeline for large-scale 3D CityGML reconstruction and photorealistic texture generation from high-resolution aerial surveys."
+      },
+      {
+        "type": "text",
+        "heading": "Automated 3D Reconstruction",
+        "body": "Developed algorithms converting 2D footprint geometries and elevation models into semantic 3D CityGML building representations at scale."
+      },
+      {
+        "type": "text",
+        "heading": "Occlusion-Aware Multi-View Texture Projection",
+        "body": "Designed custom texture projection algorithms that dynamically evaluate viewing angles, occlusions, and image resolution to project aerial imagery onto 3D building facades."
+      },
+      {
+        "type": "text",
+        "heading": "Quantitative Results",
+        "body": "Maintained strict geometric alignment with a **texture shift of less than 3 pixels**, generating high-fidelity photorealistic urban digital twin models for municipal planning."
+      }
+    ]
+  },
+  "orthophoto-production": {
+    "title": "Orthophoto production, pose estimation, and AI QA",
+    "summary": "Automated orthophoto production with AI image quality assessment (97%), PostGIS/AHN seamline optimization, and 2-pixel camera pose estimation.",
+    "context": "Professional work · HawarIT Limited",
+    "role": "AI engineering and system development",
+    "order": 3,
+    "featured": true,
+    "research_anchor": "1-orthophoto-pipeline-automation",
+    "blocks": [
+      {
+        "type": "text",
+        "heading": "My contribution",
+        "body": "At HawarIT Limited, I architected and implemented AI-based automation tools across the photogrammetric orthophoto production lifecycle, eliminating critical manual bottlenecks in image filtering, triangulation, and seamline generation."
+      },
+      {
+        "type": "text",
+        "heading": "AI-Based Image Quality Assessment (QA)",
+        "body": "Developed deep learning models to detect cloud, shadow, and blur artifacts on raw aerial imagery prior to aerial triangulation (AT), achieving **97% QA accuracy**."
+      },
+      {
+        "type": "text",
+        "heading": "Automated Camera Pose Estimation",
+        "body": "Engineered a feature-matching and tie-point generation framework to register incoming flight images against historical reference orthophotos. Attained **2-pixel alignment accuracy**, cutting manual aerial triangulation effort by **90%**."
+      },
+      {
+        "type": "text",
+        "heading": "Seamline Refinement via PostGIS & AHN LiDAR",
+        "body": "Automated seamline placement and geometric validation using PostgreSQL/PostGIS paired with AHN airborne LiDAR elevation data, cutting manual seamline editing by **65%**."
+      }
+    ]
+  },
+  "point-cloud-processing": {
+    "title": "3D point cloud intelligence and BIM extraction",
+    "summary": "AI-driven semantic segmentation and BIM model extraction from aerial, mobile, and indoor LiDAR datasets.",
+    "context": "Professional work · HawarIT Limited",
+    "role": "AI engineering and system development",
+    "order": 2,
+    "featured": true,
+    "research_anchor": "4-point-cloud-intelligence--spatial-understanding",
+    "blocks": [
+      {
+        "type": "text",
+        "heading": "My contribution",
+        "body": "At HawarIT Limited, I led the development of point cloud intelligence algorithms for semantic segmentation and automated Building Information Modeling (BIM) extraction from large-scale LiDAR datasets."
+      },
+      {
+        "type": "text",
+        "heading": "Multi-Source LiDAR Processing",
+        "body": "Built processing pipelines handling dense 3D point clouds across diverse acquisition platforms: aerial surveys, mobile vehicle-mounted mapping systems, and high-precision indoor laser scanners."
+      },
+      {
+        "type": "text",
+        "heading": "Automated Pipe & Geometry Extraction",
+        "body": "Implemented custom algorithms to detect industrial and building piping networks, segment structural components, and extract geometric properties directly from unstructured 3D point data."
+      },
+      {
+        "type": "text",
+        "heading": "Quantitative Results",
+        "body": "Achieved **95% extraction accuracy** while cutting manual 3D modeling and processing time by **60%**."
+      }
+    ]
+  },
+  "remote-sensing": {
+    "title": "Multispectral earth observation and remote sensing AI",
+    "summary": "AI solutions using Sentinel satellite imagery for crop classification, water quality analysis, and algae bloom detection (2nd place, international tender).",
+    "context": "Professional work · HawarIT Limited",
+    "role": "AI engineering and system development",
+    "order": 7,
+    "featured": false,
+    "research_anchor": "3-remote-sensing--spatiotemporal-change-detection",
+    "blocks": [
+      {
+        "type": "text",
+        "heading": "My contribution",
+        "body": "Deployed AI solutions leveraging European Space Agency (ESA) Sentinel multispectral satellite imagery for large-scale Earth observation, environmental monitoring, and natural resource management."
+      },
+      {
+        "type": "text",
+        "heading": "Multispectral Analytics",
+        "body": "Engineered computer vision pipelines operating across Sentinel-2 optical and infrared spectral bands to analyze vegetative indices, crop phenology, and surface water dynamics."
+      },
+      {
+        "type": "text",
+        "heading": "Environmental Monitoring",
+        "body": "Built multi-class deep learning models for automated crop type classification, water body delineation, and harmful algae bloom detection across aquatic ecosystems."
+      },
+      {
+        "type": "text",
+        "heading": "International Recognition",
+        "body": "This Earth observation analytics framework secured **2nd place in an international innovation tender**.\n\nIn addition to satellite remote sensing, my open-source computer vision contributions include a multi-label vehicle and traffic detection framework:\n\n- [Multi-Label Vehicle Detection Repository](https://github.com/fahome10bd/Multi-Label-Vehicle-detection-based-on-AI) (comparisons of YOLOv3, YOLOv5, and R-CNN architectures across 21 traffic classes)."
+      }
+    ]
+  },
+  "traffic-sign-inspection": {
+    "title": "Street-view GeoAI and asset localization",
+    "summary": "End-to-end GeoAI pipeline for detection and geospatial localization of 130 traffic sign and 33 street furniture classes from 360° street imagery.",
+    "context": "Professional work · HawarIT Limited",
+    "role": "AI engineering and system development",
+    "order": 5,
+    "featured": false,
+    "research_anchor": "4-point-cloud-intelligence--spatial-understanding",
+    "blocks": [
+      {
+        "type": "text",
+        "heading": "My contribution",
+        "body": "At HawarIT Limited, I engineered a comprehensive end-to-end GeoAI system for automated detection, classification, and geospatial localization of road and roadside infrastructure from car-mounted 360° street-view imagery."
+      },
+      {
+        "type": "text",
+        "heading": "Asset Detection & Recognition",
+        "body": "Trained and optimized custom YOLOv5 models capable of recognizing **130 distinct traffic sign categories** and **33 street furniture classes** under varying lighting, weather, and occlusions."
+      },
+      {
+        "type": "text",
+        "heading": "Geospatial Localization & Tracking",
+        "body": "Implemented custom multi-object tracking and triangulation algorithms to compute high-precision world coordinates for detected assets directly from vehicle GPS and camera trajectory telemetry."
+      },
+      {
+        "type": "text",
+        "heading": "Quantitative Results",
+        "body": "Delivered **>95% object detection accuracy** and **92% geospatial localization precision**, transforming raw street video logs into structured, GIS-ready asset inventories."
+      }
+    ]
+  }
+}

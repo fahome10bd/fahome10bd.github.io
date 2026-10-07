@@ -1,6 +1,7 @@
 """Check a local AcademicPages/Jekyll build for broken site links and sample content."""
 
 from html.parser import HTMLParser
+import json
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 
@@ -79,9 +80,17 @@ def main() -> None:
             failures.append(f"Upstream sample content remains: {sample}")
     if failures:
         raise AssertionError("\n".join(failures[:80]))
+    projects = json.loads((ROOT / '_data/projects.json').read_text(encoding='utf-8'))
+    documents = list((ROOT / '_portfolio').glob('*.md'))
     assert len(list((ROOT / "_publications").glob("*.md"))) == 1
-    assert len(list((ROOT / "_portfolio").glob("*.md"))) == 7
-    print(f"Verified {len(pages)} generated HTML pages, {local_links} local links, one publication and seven projects")
+    assert {file.stem for file in documents} == set(projects), 'Project data and collection files differ'
+    for key, project in projects.items():
+        output = SITE / 'portfolio' / key / 'index.html'
+        assert output.exists(), f'Missing project page: {key}'
+        assert project['title'].replace('&', '&amp;') in output.read_text(encoding='utf-8'), f'Missing project title: {key}'
+    assert not (SITE / 'content').exists(), 'Word source folders must not be published'
+    assert not (SITE / 'scripts').exists(), 'Local editor must not be published'
+    print(f"Verified {len(pages)} generated HTML pages, {local_links} local links, one publication and {len(projects)} projects")
 
 
 if __name__ == "__main__":
