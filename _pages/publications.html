@@ -5,34 +5,16 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+{% assign publication_section = site.data.cv.sections | where: 'title', 'Peer-Reviewed Publication' | first %}
+{% assign citation = publication_section.rows | first %}
+{% for post in site.publications reversed %}
+<div class="list__item">
+  <article class="archive__item">
+    <h2 class="archive__item-title">{{ post.title | escape }}</h2>
+    <p>{{ citation.body }}</p>
+    <p><a href="{{ post.url | relative_url }}">Publication details</a></p>
+  </article>
+</div>
+{% endfor %}
 
-{% include base_path %}
-
-The conference paper below is one publication; its arXiv version is the author preprint of the same work.
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+<p>The arXiv version is the author preprint of the same conference publication.</p>

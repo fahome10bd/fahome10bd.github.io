@@ -70,6 +70,21 @@ class WorkflowTests(unittest.TestCase):
             self.store.save(old)
         self.assertIn('new-project', self.store.read()['projects'])
 
+    def test_research_pages_follow_module_creation_and_removal(self):
+        value = self.store.read()
+        module = copy.deepcopy(value['research']['modules'][0])
+        module['id'] = 'new-research-direction'
+        module['title'] = 'New research direction'
+        value['research']['modules'].append(module)
+        result = self.store.save(value)
+        document = self.root / '_research/new-research-direction.md'
+        self.assertTrue(document.exists())
+        self.assertIn('permalink: /research/new-research-direction/', document.read_text(encoding='utf-8'))
+        result['research']['modules'] = [item for item in result['research']['modules'] if item['id'] != module['id']]
+        result = self.store.save(result)
+        self.assertFalse(document.exists())
+        self.assertTrue((self.root / result['backup'] / '_research/new-research-direction.md').exists())
+
     def test_invalid_image_path_cannot_escape_site(self):
         value = self.new_project()
         value['projects']['new-project']['blocks'].append({'type': 'image', 'src': '/images/../../private.png', 'alt': 'Description', 'caption': '', 'size': 'full'})

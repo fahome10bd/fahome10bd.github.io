@@ -190,7 +190,7 @@ function render() {
   if (!item) return;
   byId("item-kind").textContent = state.kind === "projects" ? "Project case study" : "Research direction";
   byId("item-heading").textContent = item.title;
-  byId("preview-link").href = state.kind === "projects" ? `/preview/portfolio/${state.selected}/` : `/preview/research/#${state.selected}`;
+  byId("preview-link").href = state.kind === "projects" ? `/preview/portfolio/${state.selected}/` : `/preview/research/${state.selected}/`;
   renderMetadata(item); renderBlocks(item);
   byId("editor-fields").disabled = state.busy;
 }

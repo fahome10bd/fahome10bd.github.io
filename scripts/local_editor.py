@@ -108,6 +108,16 @@ def project_document(key, project):
     ])).encode('utf-8')
 
 
+def research_document(module):
+    return ('\n'.join([
+        '---', 'layout: research-detail', 'collection: research',
+        'title: ' + json.dumps(module['title'], ensure_ascii=False),
+        'permalink: /research/' + module['id'] + '/',
+        'content_key: ' + module['id'], 'author_profile: true',
+        'share: false', 'comments: false', '---', '',
+    ])).encode('utf-8')
+
+
 def atomic_write(path, payload):
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_name(path.name + '.' + secrets.token_hex(6) + '.tmp')
@@ -145,6 +155,12 @@ class ContentStore:
                 changes[self.root / '_portfolio' / (key + '.md')] = project_document(key, project)
             for key in previous['projects'].keys() - content['projects'].keys():
                 changes[self.root / '_portfolio' / (key + '.md')] = None
+            for module in content['research']['modules']:
+                changes[self.root / '_research' / (module['id'] + '.md')] = research_document(module)
+            prior_modules = {module['id'] for module in previous['research']['modules']}
+            current_modules = {module['id'] for module in content['research']['modules']}
+            for key in prior_modules - current_modules:
+                changes[self.root / '_research' / (key + '.md')] = None
             originals = {path: path.read_bytes() if path.exists() else None for path in changes}
             stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
             backup = self.root / 'local' / 'editor-history' / stamp

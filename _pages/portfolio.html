@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: single
 title: "Projects"
 permalink: /portfolio/
 author_profile: true
@@ -8,12 +8,17 @@ author_profile: true
 <p>Selected professional work in geospatial AI and computer vision, alongside undergraduate research. Each case study describes my contribution, methods, and reported outcomes.</p>
 
 {% assign ordered_projects = site.portfolio | sort: 'order' %}
-{% for post in ordered_projects %}
-  {% assign project = site.data.projects[post.content_key] %}
-  <article class="project-list-item">
-    <p class="project-context">{{ project.context | escape }}</p>
-    <h2><a href="{{ post.url | relative_url }}">{{ project.title | escape }}</a></h2>
-    <p>{{ project.summary | escape }}</p>
-    <a class="project-read-link" href="{{ post.url | relative_url }}">Read case study <span aria-hidden="true">→</span></a>
-  </article>
+{% assign project_groups = ordered_projects | group_by_exp: 'item', 'site.data.projects[item.content_key].context' %}
+{% for group in project_groups %}
+<h2>{{ group.name | escape }}</h2>
+<ul>
+  {% for post in group.items %}
+    {% assign project = site.data.projects[post.content_key] %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ project.title | escape }}</a>
+      <p>{{ project.summary | escape }}</p>
+      <ul><li><a href="{{ post.url | relative_url }}">View project</a></li></ul>
+    </li>
+  {% endfor %}
+</ul>
 {% endfor %}

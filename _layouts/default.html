@@ -11,19 +11,21 @@ layout: compress
     {% include head/custom.html %}
   </head>
 
-  <body>
+  <body class="{% if page.url == '/' %}reference-home{% else %}reference-page{% endif %}">
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
     {{ content }}
 
+    {% include footer/custom.html %}
+    {% if page.url == '/' %}
     <div class="page__footer">
       <footer>
-        {% include footer/custom.html %}
         {% include footer.html %}
       </footer>
     </div>
+    {% endif %}
 
     {% include scripts.html %}
 

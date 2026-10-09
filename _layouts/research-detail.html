@@ -1,0 +1,7 @@
+---
+layout: single
+---
+{% assign module = site.data.research.modules | where: 'id', page.content_key | first %}
+{% if module.summary and module.summary != '' %}<p class="module-summary">{{ module.summary | escape }}</p>{% endif %}
+{% include content-blocks.html blocks=module.blocks %}
+<p class="content-next"><a href="{{ '/research/' | relative_url }}#{{ module.id | escape }}">All research directions</a> · <a href="{{ '/portfolio/' | relative_url }}">Projects</a></p>

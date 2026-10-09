@@ -11,9 +11,9 @@ I am the **Project Lead in the AI Department at [HawarIT Limited](https://www.ha
 
 My transition from Electrical and Electronic Engineering to Geospatial AI was driven by a core realization: while hardware enables sensors to capture the physical world, intelligent algorithms allow us to understand, reconstruct, and reason about it.
 
-<div class="academic-actions">
-  <a href="{{ '/files/Mohammad_Mahmudul_Hasan_Academic_CV.pdf' | relative_url }}" class="btn btn--primary"><strong>Download Academic CV (PDF)</strong></a>
-</div>
+<p>
+  <a href="{{ '/files/Mohammad_Mahmudul_Hasan_Academic_CV.pdf' | relative_url }}"><strong>Download Academic CV (PDF)</strong></a>
+</p>
 
 ## Research interests
 

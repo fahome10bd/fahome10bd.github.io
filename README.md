@@ -2,6 +2,8 @@
 
 This site uses AcademicPages and Jekyll for a professor-facing MSc/PhD research portfolio. It retains the academic sidebar, navigation, publication collection, and project pages, with consistent blue accents and readable typography.
 
+The presentation follows the AcademicPages layout at [jayrobwilliams.com](https://jayrobwilliams.com/): 16/18 px system sans-serif body text, 1.5 line spacing, grey text, blue links, a left profile sidebar, and the same header/content spacing. The homepage alone has a footer, as requested. Research uses a topic grid with separate detail pages; Projects replaces Teaching and groups case studies by context; CV displays Hasan's full text with a PDF download link. The reference site's biography, portrait, and publications are not used.
+
 ## Main editing workflow
 
 **Edit Word documents in `content/projects/` and `content/research/`, then import and rebuild.** Existing projects and research directions have populated documents. New-item templates are in `content/templates/`.
@@ -34,7 +36,7 @@ The Word importer and browser editor use only the Python standard library. The d
 | Homepage | `_pages/about.md` |
 | Research directions | `content/research/*/research.docx` → `_data/research.json` |
 | Project case studies | `content/projects/*/project.docx` → `_data/projects.json` and generated `_portfolio/*.md` |
-| Shared text/image formatting | `_includes/content-blocks.html` and `_sass/layout/_academic.scss` |
+| Shared text/image formatting | `_includes/content-blocks.html`, `_sass/layout/_academic.scss`, and `_sass/layout/_reference.scss` |
 | Publication | `_publications/retinal-oct-explainable-ai.md` |
 | Online CV and downloadable PDF content | `_data/cv.json` |
 | PDF generation | `python scripts/build_cv.py` |

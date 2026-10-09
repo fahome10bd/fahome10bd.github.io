@@ -14,7 +14,7 @@ The labelled fields at the top control the page:
 | Summary | Introduction and project-list description |
 | Context | Employer, institution, or project setting |
 | Role | Your individual contribution |
-| Order | Display position, from 1 to 1000 |
+| Order | Position within its context group, from 1 to 1000; homepage highlights use the overall order |
 | Featured | `yes` or `no`; the first three featured projects appear on the homepage |
 | Related research | Optional research folder name linking to its section |
 
@@ -40,7 +40,7 @@ Create a folder such as `projects/urban-reconstruction/`. Copy `templates/projec
 
 ## Edit research
 
-Use `research/<direction-name>/research.docx`. Research documents use Title and Summary fields and the same section/image rules. Copy `templates/research-template.docx` into a new research folder and name it **research.docx** to add a direction. Edit the research page's shared introduction or direction ordering in the local editor.
+Use `research/<direction-name>/research.docx`. Research documents use Title and Summary fields and the same section/image rules. Copy `templates/research-template.docx` into a new research folder and name it **research.docx** to add a direction. Edit the research page's shared introduction or direction ordering in the local editor. Each direction has a separate detail page; the research overview displays topic cards and automatically uses the first image block as a preview when one is available.
 
 ## Import and review
 

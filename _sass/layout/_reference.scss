@@ -1,0 +1,72 @@
+/* AcademicPages presentation measured from jayrobwilliams.com.
+   Shared theme structure is retained; content and assets belong to Hasan. */
+:root, html[data-theme="dark"] {
+  --global-base-color: #5f9bc0;
+  --global-bg-color: #fff;
+  --global-footer-bg-color: #f2f3f3;
+  --global-border-color: #f2f3f3;
+  --global-dark-border-color: #bdc1c4;
+  --global-link-color: #52adc8;
+  --global-link-color-hover: #3f879d;
+  --global-link-color-visited: #52adc8;
+  --global-text-color: #494e52;
+  --global-text-color-light: #9ba1a6;
+  --global-masthead-link-color: #7a8288;
+  --global-masthead-link-color-hover: #494e52;
+  --academic-accent: #52adc8;
+}
+html { font-size: 16px; }
+@media (min-width: 768px) { html { font-size: 18px; } }
+body { padding: 0 0 2em; line-height: 1.5; font-family: $sans-serif; }
+body.reference-home { padding-bottom: 9em; }
+h1 { font-size: 1.563em; }
+h2 { font-size: 1.25em; }
+h3 { font-size: 1em; }
+h4 { font-size: 0.75em; }
+h1, h2, h3, h4, h5, h6 { margin: 2em 0 0.5em; line-height: 1.2; }
+h1, .page__title { margin-top: 0; }
+.page__title { line-height: 1; }
+.page__content h2, .page__content h3 { margin-top: 2em; }
+.masthead { position: relative; top: auto; height: auto; border-bottom: 1px solid #f2f3f3; }
+.masthead::after { display: none; }
+.masthead__inner-wrap { padding: 1em; }
+.greedy-nav a { color: #7a8288; }
+.masthead__menu-item.selected a { color: #7a8288; font-weight: normal; border-bottom: 0; pointer-events: auto; cursor: pointer; }
+.masthead__menu-item--lg a, .masthead__menu-item--lg.selected a { font-weight: 700; }
+.masthead__menu-item.selected a:hover { border-bottom: 0; }
+.greedy-nav .visible-links a::before { background: #5f9bc0; }
+.sidebar { position: static; height: auto; overflow: visible; padding-top: 0; margin-top: 0; max-width: none; }
+.sidebar p, .sidebar li { font-size: 0.75em; line-height: 1.5; }
+.sidebar .author__name { font-size: 1em; }
+.author__urls a { font-size: 1em; }
+#main { margin-top: 2em; }
+.module-summary, .project-summary { line-height: 1.5; }
+.content-block h3 { font-size: 1em; }
+.content-figure figcaption { font-family: $serif; font-size: 0.75em; color: #777a7d; }
+.project-list-item h2 { font-size: 1.25em; }
+.project-context { font-size: 0.75em; }
+.archive__item-excerpt { font-size: 0.75em; }
+.page__footer { position: absolute; bottom: 0; left: 0; height: auto; margin-top: 3em; z-index: auto; }
+.page__footer footer { display: block; margin-top: 2em; padding: 0 1em 2em; min-height: 0; text-align: left; }
+.page__footer-follow { font-size: 1em; line-height: 1.5; }
+.page__footer-follow ul { display: block; }
+.page__footer-follow li { display: inline-block; padding: 5px 0; margin-right: 1em; font-size: 0.75em; line-height: 1.5; text-transform: uppercase; }
+.page__footer-copyright { font-size: 0.6875em; line-height: 1.5; }
+.reference-sitemap { margin-bottom: 0.5em; font-size: 0.75em; }
+.reference-research-grid { display: grid; grid-template-columns: 1fr; gap: 2em 1.5em; margin: 2em 0; }
+.reference-research-card h2 { margin: 0 0 0.5em; font-size: 1em; scroll-margin-top: 1em; }
+.reference-research-card p { font-size: 0.85em; }
+.reference-research-card img { display: block; width: 100%; height: auto; }
+.reference-publication-links { display: flex; gap: 1em; flex-wrap: wrap; }
+@media (min-width: 600px) { .reference-research-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 768px) { .archive { padding-right: 200px; } }
+
+/* Full text CV keeps the reference page frame and typography. */
+.moderncv-container { line-height: 1.5; }
+.mcv-first-name, .mcv-last-name { font-size: 1.563rem; line-height: 1.2; }
+.page__content .mcv-section-title { font-size: 1.25rem; color: var(--global-text-color); }
+.mcv-section-rule { border-color: var(--global-border-color); }
+@media (max-width: 1024px) {
+  .mcv-header { flex-direction: column; }
+  .mcv-contact-block { text-align: left; }
+}

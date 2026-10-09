@@ -16,9 +16,12 @@ class Page(HTMLParser):
         super().__init__()
         self.links = []
         self.ids = set()
+        self.footer_count = 0
 
     def handle_starttag(self, tag, attrs):
         attributes = dict(attrs)
+        if 'page__footer' in attributes.get('class', '').split():
+            self.footer_count += 1
         if attributes.get("id"):
             self.ids.add(attributes["id"])
         for key in ("href", "src"):
@@ -90,6 +93,11 @@ def main() -> None:
         assert project['title'].replace('&', '&amp;') in output.read_text(encoding='utf-8'), f'Missing project title: {key}'
     assert not (SITE / 'content').exists(), 'Word source folders must not be published'
     assert not (SITE / 'scripts').exists(), 'Local editor must not be published'
+    for file, page in pages.items():
+        assert page.footer_count == (1 if file == (SITE / 'index.html').resolve() else 0), f'Homepage-only footer rule failed: {file}'
+    research = json.loads((ROOT / '_data/research.json').read_text(encoding='utf-8'))
+    for module in research['modules']:
+        assert (SITE / 'research' / module['id'] / 'index.html').exists(), f'Missing research page: {module["id"]}'
     print(f"Verified {len(pages)} generated HTML pages, {local_links} local links, one publication and {len(projects)} projects")
 
 
