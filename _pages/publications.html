@@ -1,20 +1,25 @@
 ---
 layout: archive
 title: "Publications"
+show_title: false
 permalink: /publications/
 author_profile: true
 ---
 
 {% assign publication_section = site.data.cv.sections | where: 'title', 'Peer-Reviewed Publication' | first %}
 {% assign citation = publication_section.rows | first %}
-{% for post in site.publications reversed %}
+{% assign conference_papers = site.publications | where: 'category', 'conferences' %}
+{% if conference_papers.size > 0 %}
+<h2 id="conference-papers">Conference papers</h2>
+{% for post in conference_papers reversed %}
 <div class="list__item">
   <article class="archive__item">
-    <h2 class="archive__item-title">{{ post.title | escape }}</h2>
+    <h3 class="archive__item-title">{{ post.title | escape }}</h3>
     <p>{{ citation.body }}</p>
     <p><a href="{{ post.url | relative_url }}">Publication details</a></p>
   </article>
 </div>
 {% endfor %}
+{% endif %}
 
 <p>The arXiv version is the author preprint of the same conference publication.</p>

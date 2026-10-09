@@ -27,6 +27,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/import_and_preview.p
 
 The Word importer and browser editor use only the Python standard library. The downloadable CV renderer additionally uses ReportLab. Jekyll requires Ruby and Bundler; the build script uses the adjacent isolated `academicpages_runtime` when present and falls back to an installed Bundler otherwise.
 
+## Change the profile photo
+
+Replace **`images/profile.jpg`** with your new JPEG photo, keeping that filename, then rebuild the site. The shared sidebar automatically uses it on the homepage and other pages. The displayed photo has a circular frame; the original file remains unchanged. A build-version query refreshes the photo after each rebuild. To use a different filename or format, update `author.avatar` in `_config.yml`.
+
 ## Content and formatting
 
 | Content | Source |

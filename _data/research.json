@@ -86,5 +86,14 @@
         }
       ]
     }
-  ]
+  ],
+  "thesis": {
+    "title": "Quantifying Locomotive Features in EEG of Impaired Consciousness (Coma) with Distinctive Cerebral Rhythms",
+    "institution": "Islamic University of Technology (IUT)",
+    "year": 2021,
+    "summary": "My undergraduate research examined EEG time-series signals and distinctive cerebral rhythms to identify features related to impaired consciousness. This work formed the signal-processing foundation of my later interests in machine learning and intelligent systems.",
+    "project_url": "/portfolio/eeg-research/",
+    "repository_url": "https://repository.iutoic-dhaka.edu/items/e79be58c-22b4-4817-9329-05b0915d8160",
+    "pdf_url": "/files/Mohammad_Mahmudul_Hasan_BSc_Thesis.pdf"
+  }
 }

@@ -22,7 +22,7 @@ repository               : "fahome10bd/fahome10bd.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           :
+  avatar           : "profile.jpg" # Replace images/profile.jpg to change the sidebar photo.
   name             : "Mohammad Mahmudul Hasan"
   pronouns         : # example: "she/her"  
   bio              : "Project Lead, AI Engineer | GeoAI, 3D Urban Modeling & Point Clouds"

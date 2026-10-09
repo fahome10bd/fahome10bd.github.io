@@ -10,12 +10,15 @@
 main:
   - title: "Publications"
     url: /publications/
+    collection: publications
 
   - title: "Research"
     url: /research/
+    collection: research
 
   - title: "Projects"
     url: /portfolio/
+    collection: portfolio
 
   - title: "CV"
     url: /cv/

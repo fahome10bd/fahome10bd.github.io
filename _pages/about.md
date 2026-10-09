@@ -1,15 +1,19 @@
 ---
 permalink: /
-title: "Mohammad Mahmudul Hasan"
+title: "About"
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
-I am the **Project Lead in the AI Department at [HawarIT Limited](https://www.hawarit.com/)**, where I lead multidisciplinary teams developing AI-driven solutions for large-scale geospatial automation and spatial intelligence. Prior to this, I served as Senior AI Engineer and ML Engineer at HawarIT. I graduated with a B.Sc. in Electrical and Electronic Engineering (EEE) from the **Islamic University of Technology (IUT)** in 2021 with a CGPA of **3.76/4.00 (First Class Honours)**. My undergraduate thesis was on neurophysiological signal analysis: *Quantifying the Locomotive Features in EEG of Impaired Consciousness and Coma with Distinctive Cerebral Rhythms* [[IUT Repository](https://repository.iutoic-dhaka.edu/items/e79be58c-22b4-4817-9329-05b0915d8160)] · [[Thesis PDF]({{ '/files/Mohammad_Mahmudul_Hasan_BSc_Thesis.pdf' | relative_url }})].
+I am the **Project Lead in the AI Department at [HawarIT Limited](https://www.hawarit.com/)**, where I lead multidisciplinary teams developing AI systems for large-scale geospatial automation. I have **five years of industrial experience working in research and development**, with a focus on geospatial AI, computer vision, and spatial automation. My work spans orthophoto production, camera pose estimation, building change detection, LiDAR analysis, and 3D city modeling. I combine algorithm development with system design to turn aerial imagery and point clouds into usable maps, structured spatial information, and detailed 3D models.
 
-My transition from Electrical and Electronic Engineering to Geospatial AI was driven by a core realization: while hardware enables sensors to capture the physical world, intelligent algorithms allow us to understand, reconstruct, and reason about it.
+My academic foundation is in Electrical and Electronic Engineering. I graduated from the **Islamic University of Technology** in 2021 with a **CGPA of 3.76/4.00 and First Class Honours**. My [undergraduate thesis]({{ '/research/#undergraduate-thesis' | relative_url }}) examined EEG signals and cerebral rhythms in impaired consciousness, and I co-authored a [peer-reviewed study]({{ '/publication/retinal-oct-explainable-ai/' | relative_url }}) on explainable deep learning for retinal OCT classification. My interests have since expanded from interpreting physiological signals to understanding and reconstructing physical environments.
+
+Working across geospatial production pipelines has shaped the research questions I want to pursue. Although individual tasks can be automated, manual steps between image assessment, geometric reconstruction, and spatial validation still limit the consistency and scalability of the overall workflow. This motivates my interest in **autonomous GIS systems** that integrate computer vision, photogrammetry, remote sensing, and point cloud intelligence.
+
+My research interests centre on **3D scene understanding, urban digital twins, and spatiotemporal change detection**. I am particularly interested in investigating how neural rendering methods, including 3D Gaussian Splatting, can complement structured CityGML representations for urban reconstruction. Through graduate research, I aim to extend my engineering experience into reliable spatial AI methods for urban monitoring, infrastructure modeling, and disaster assessment.
 
 <p>
   <a href="{{ '/files/Mohammad_Mahmudul_Hasan_Academic_CV.pdf' | relative_url }}"><strong>Download Academic CV (PDF)</strong></a>

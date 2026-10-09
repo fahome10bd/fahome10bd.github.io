@@ -31,15 +31,18 @@ h1, .page__title { margin-top: 0; }
 .masthead::after { display: none; }
 .masthead__inner-wrap { padding: 1em; }
 .greedy-nav a { color: #7a8288; }
-.masthead__menu-item.selected a { color: #7a8288; font-weight: normal; border-bottom: 0; pointer-events: auto; cursor: pointer; }
+.masthead__menu-item.selected a { color: #24649f; font-weight: 700; border-bottom: 0; pointer-events: auto; cursor: pointer; }
 .masthead__menu-item--lg a, .masthead__menu-item--lg.selected a { font-weight: 700; }
 .masthead__menu-item.selected a:hover { border-bottom: 0; }
 .greedy-nav .visible-links a::before { background: #5f9bc0; }
+.greedy-nav .visible-links .selected a::before { transform: scaleX(1); height: 3px; }
+.greedy-nav .hidden-links .selected a { color: #24649f; font-weight: 700; border-left: 3px solid #5f9bc0; }
 .sidebar { position: static; height: auto; overflow: visible; padding-top: 0; margin-top: 0; max-width: none; }
 .sidebar p, .sidebar li { font-size: 0.75em; line-height: 1.5; }
 .sidebar .author__name { font-size: 1em; }
+.author__avatar img { aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; }
 .author__urls a { font-size: 1em; }
-#main { margin-top: 2em; }
+#main { margin-top: 1em; }
 .module-summary, .project-summary { line-height: 1.5; }
 .content-block h3 { font-size: 1em; }
 .content-figure figcaption { font-family: $serif; font-size: 0.75em; color: #777a7d; }
