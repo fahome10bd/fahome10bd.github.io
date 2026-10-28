@@ -74,3 +74,9 @@ body { padding-top: 0 !important; }
   .mcv-header { flex-direction: column; }
   .mcv-contact-block { text-align: left; }
 }
+
+@media (min-width: 768px) {
+  body.reference-home .page__content p {
+    text-align: justify;
+  }
+}
