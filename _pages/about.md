@@ -7,51 +7,14 @@ redirect_from:
   - /about.html
 ---
 
-I am the **Project Lead in the AI Department at [HawarIT Limited](https://www.hawarit.com/)**, where I lead multidisciplinary teams developing AI systems for large-scale geospatial automation. I have **five years of industrial experience working in research and development**, with a focus on geospatial AI, computer vision, and spatial automation. My work spans orthophoto production, camera pose estimation, building change detection, LiDAR analysis, and 3D city modeling. I combine algorithm development with system design to turn aerial imagery and point clouds into usable maps, structured spatial information, and detailed 3D models.
+I am the **Project Lead in the AI Department at HawarIT Limited**, bringing **five years of industrial research and development (R&D) experience** in **Geospatial AI (GeoAI), computer vision, photogrammetry, and 3D spatial automation**. Progressing from Machine Learning Engineer (2021–2023) and Senior AI Engineer (2023–2024) to Project Lead (2024–Present)—and recognized as *Best Performer of the Year* (2022) and *Excellent Performer* (2024)—I lead multidisciplinary R&D teams that bridge algorithm design and production system architecture to transform raw aerial imagery, multi-platform LiDAR point clouds, street-view captures, and satellite observations into structured 2D/3D spatial intelligence.
 
-My academic foundation is in Electrical and Electronic Engineering. I graduated from the **Islamic University of Technology** in 2021 with a **CGPA of 3.76/4.00 and First Class Honours**. My [undergraduate thesis]({{ '/research/#undergraduate-thesis' | relative_url }}) examined EEG signals and cerebral rhythms in impaired consciousness, and I co-authored a [peer-reviewed study]({{ '/publication/retinal-oct-explainable-ai/' | relative_url }}) on explainable deep learning for retinal OCT classification. My interests have since expanded from interpreting physiological signals to understanding and reconstructing physical environments.
+Across large-scale industrial geospatial deployments, my R&D work has delivered measurable improvements in geometric precision and workflow automation. In **3D point cloud intelligence**, I developed semantic segmentation and automated CAD/BIM extraction pipelines across aerial, mobile, and indoor LiDAR datasets, achieving **95% extraction accuracy** while reducing manual modeling effort by **60%**. In **photogrammetric and orthophoto automation**, I engineered feature-matching camera pose estimation that aligns new aerial imagery with historical orthophotos within **2 pixels** (cutting manual aerial triangulation by **90%**), deep learning image quality assessment (**97% accuracy** across cloud, shadow, and blur detection), and PostGIS/LiDAR-driven seamline optimization (**65% reduction** in manual editing). My work further spans automated **3D CityGML reconstruction** with occlusion-aware multi-view texture projection (**<3-pixel** texture shift), **360° street-view GeoAI localization** across 163 urban asset classes (**>95% detection accuracy**, **92% localization precision**), **multi-temporal building change detection** (**88% accuracy**, **65% less manual inspection**), and **Sentinel multispectral remote sensing** (**2nd Place** in an international innovation tender).
 
-Working across geospatial production pipelines has shaped the research questions I want to pursue. Although individual tasks can be automated, manual steps between image assessment, geometric reconstruction, and spatial validation still limit the consistency and scalability of the overall workflow. This motivates my interest in **autonomous GIS systems** that integrate computer vision, photogrammetry, remote sensing, and point cloud intelligence.
+My academic foundation is in **Electrical and Electronic Engineering (EEE)** at the **Islamic University of Technology (IUT)**, where I graduated in 2021 with a **CGPA of 3.76/4.00 and First Class Honours**, following perfect **5.00/5.00 GPAs** and a **Government Merit Scholarship** at Notre Dame College. My transition from EEE to Geospatial AI was driven by a core realization: while hardware enables machines to sense the physical world, intelligent algorithms allow them to interpret it. My early academic research focused on decoding physiological signals and interpretable medical imaging—investigating EEG cerebral rhythms in impaired consciousness for my undergraduate thesis (*“Quantifying Locomotive Features in EEG of Impaired Consciousness (Coma) with Distinctive Cerebral Rhythms”*, Grade: A+) and co-authoring a peer-reviewed **IEEE CSDE (2021)** study on explainable deep learning for retinal OCT classification—before expanding that signal-processing and mathematical foundation toward reconstructing complex 3D physical environments.
 
-My research interests centre on **3D scene understanding, urban digital twins, and spatiotemporal change detection**. I am particularly interested in investigating how neural rendering methods, including 3D Gaussian Splatting, can complement structured CityGML representations for urban reconstruction. Through graduate research, I aim to extend my engineering experience into reliable spatial AI methods for urban monitoring, infrastructure modeling, and disaster assessment.
+Leading production mapping workflows has shaped the central question driving my graduate research ambitions: although deep learning has succeeded on isolated geospatial tasks, end-to-end GIS pipelines remain bottlenecked by manual handoffs between image validation, geometric orientation, 3D reconstruction, and semantic verification. Through graduate research (M.Sc./Ph.D.), I aim to develop **unified Autonomous GIS frameworks and Urban Digital Twins** that integrate computer vision, photogrammetry, remote sensing, and point cloud intelligence. I am particularly interested in investigating how **neural rendering and 3D Gaussian Splatting** can complement structured **CityGML and BIM representations** for photorealistic, metrically accurate urban reconstruction, alongside scalable **spatiotemporal change detection** for smart cities, infrastructure monitoring, and disaster resilience.
 
 <p>
-  <a href="{{ '/files/Mohammad_Mahmudul_Hasan_Academic_CV.pdf' | relative_url }}"><strong>Download Academic CV (PDF)</strong></a>
+  <a href="{{ '/files/Mohammad_Mahmudul_Hasan_Academic_CV.pdf' | relative_url }}"><strong>Download Academic CV (PDF)</strong></a> &middot; <a href="{{ '/research/' | relative_url }}"><strong>Explore Research Areas</strong></a>
 </p>
-
-## Research interests
-
-- **3D spatial intelligence:** Semantic understanding of point clouds and urban scenes, with structured CAD/BIM extraction.
-- **Urban reconstruction and digital twins:** Connecting photogrammetry and CityGML with neural rendering, including proposed work on 3D Gaussian Splatting.
-- **Geospatial automation and change detection:** Reliable processing of aerial imagery and multi-temporal observations for GIS workflows.
-
-[Explore my research directions]({{ '/research/' | relative_url }})
-
-## Selected projects
-
-{% assign project_order = site.portfolio | sort: 'order' %}
-{% assign featured_count = 0 %}
-{% for item in project_order %}
-  {% assign project = site.data.projects[item.content_key] %}
-  {% if project.featured and featured_count < 3 %}
-<div class="selected-project">
-  <h3><a href="{{ item.url | relative_url }}">{{ project.title | escape }}</a></h3>
-  <p>{{ project.summary | escape }}</p>
-</div>
-    {% assign featured_count = featured_count | plus: 1 %}
-  {% endif %}
-{% endfor %}
-
-[See all projects]({{ '/portfolio/' | relative_url }})
-
-## Peer-reviewed publication
-
-Tasnim Sakib Apon, **Mohammad Mahmudul Hasan**, Abrar Islam, and Md. Golam Rabiul Alam. “Demystifying Deep Learning Models for Retinal OCT Disease Classification using Explainable AI.” *IEEE CSDE, 2021*.
-
-[Publication details]({{ '/publication/retinal-oct-explainable-ai/' | relative_url }}) · [DOI](https://doi.org/10.1109/CSDE53843.2021.9718400) · [Author preprint](https://arxiv.org/abs/2111.03890)
-
-## Contact
-
-For research discussions and graduate opportunities: [mahmudul18@iut-dhaka.edu](mailto:mahmudul18@iut-dhaka.edu).
-
-[Online CV]({{ '/cv/' | relative_url }}) · [GitHub](https://github.com/fahome10bd) · [LinkedIn](https://www.linkedin.com/in/fahome10bd/)
