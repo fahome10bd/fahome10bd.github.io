@@ -17,9 +17,21 @@ excerpt: "Undergraduate thesis examining EEG time-series signals and distinctive
 
 **Institutional Repository:** [IUT Repository Item e79be58c](https://repository.iutoic-dhaka.edu/items/e79be58c-22b4-4817-9329-05b0915d8160)
 
-**Full Thesis Document:** [Download Thesis PDF]({{ '/files/Mohammad_Mahmudul_Hasan_BSc_Thesis.pdf' | relative_url }})
-
 ### Abstract & Overview
 
 This undergraduate research investigates the quantitative analysis of electroencephalogram (EEG) time-series recordings in patients with impaired consciousness (coma). By isolating distinctive cerebral rhythms across canonical spectral bands, the work extracts discriminative locomotive and neurological features correlated with varying states of consciousness. The research formed the mathematical and signal-processing foundation for subsequent work in statistical pattern recognition, explainable AI, and high-dimensional spatial intelligence.
 
+---
+
+### Document Viewer
+
+<div style="margin: 1.5em 0;">
+  <p>
+    <strong>Download Options:</strong>
+    <a class="btn btn--primary" href="{{ '/files/Mohammad_Mahmudul_Hasan_BSc_Thesis.pdf' | relative_url }}" target="_blank" rel="noopener">Download Thesis (PDF)</a>
+    <a class="btn btn--inverse" href="https://repository.iutoic-dhaka.edu/items/e79be58c-22b4-4817-9329-05b0915d8160" target="_blank" rel="noopener">View at IUT Repository</a>
+  </p>
+  <div style="position: relative; width: 100%; height: 750px; border: 1px solid #e1e4e8; border-radius: 4px; overflow: hidden; margin-top: 1em;">
+    <iframe src="{{ '/files/Mohammad_Mahmudul_Hasan_BSc_Thesis.pdf' | relative_url }}" width="100%" height="100%" style="border: none;" title="Thesis Document Viewer"></iframe>
+  </div>
+</div>
