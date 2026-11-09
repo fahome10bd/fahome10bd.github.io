@@ -85,7 +85,7 @@ def main() -> None:
         raise AssertionError("\n".join(failures[:80]))
     projects = json.loads((ROOT / '_data/projects.json').read_text(encoding='utf-8'))
     documents = list((ROOT / '_portfolio').glob('*.md'))
-    assert len(list((ROOT / "_publications").glob("*.md"))) == 1
+    assert len(list((ROOT / "_publications").glob("*.md"))) == 3
     assert {file.stem for file in documents} == set(projects), 'Project data and collection files differ'
     for key, project in projects.items():
         output = SITE / 'portfolio' / key / 'index.html'

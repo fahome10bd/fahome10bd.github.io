@@ -54,12 +54,20 @@
       ]
     },
     {
-      "title": "Peer-Reviewed Publication",
+      "title": "Publications & Academic Research",
       "page": 1,
       "rows": [
         {
           "label": "2021",
           "body": "Tasnim Sakib Apon, <b>Mohammad Mahmudul Hasan</b>, Abrar Islam, and Md. Golam Rabiul Alam. “Demystifying Deep Learning Models for Retinal OCT Disease Classification using Explainable AI.” <i>2021 IEEE Asia-Pacific Conference on Computer Science and Data Engineering (CSDE).</i><br/><a href=\"https://doi.org/10.1109/CSDE53843.2021.9718400\">DOI: 10.1109/CSDE53843.2021.9718400</a> · <a href=\"https://arxiv.org/abs/2111.03890\">Author preprint</a>."
+        },
+        {
+          "label": "2021",
+          "body": "Fatema Zerin Prottasha and <b>Mohammad Mahmudul Hasan</b>. “An Automated Rule-Based Fault Detection Method for Rotating Machines Using Accelerometer Vibration Signal Analysis.” <i>Research Manuscript / Technical Report, EEE Dept., IUT.</i><br/><a href=\"/publication/automated-fault-detection-rotating-machines/\">Details</a> · <a href=\"/files/Automated_Fault_Detection_Rotating_Machines_Paper.docx\">Manuscript (.docx)</a>."
+        },
+        {
+          "label": "Thesis (2021)",
+          "body": "<b>Mohammad Mahmudul Hasan</b>. “Quantifying Locomotive Features in EEG of Impaired Consciousness (Coma) with Distinctive Cerebral Rhythms.” <i>B.Sc. Thesis, Islamic University of Technology (IUT). Grade: A+.</i><br/><a href=\"https://repository.iutoic-dhaka.edu/items/e79be58c-22b4-4817-9329-05b0915d8160\">IUT repository</a> · <a href=\"/files/Mohammad_Mahmudul_Hasan_BSc_Thesis.pdf\">Thesis PDF</a>."
         }
       ]
     },
