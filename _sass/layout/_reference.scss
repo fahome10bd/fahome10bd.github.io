@@ -63,7 +63,20 @@ body { padding-top: 0 !important; }
 .reference-research-card img { display: block; width: 100%; height: auto; }
 .reference-publication-links { display: flex; gap: 1em; flex-wrap: wrap; }
 @media (min-width: 600px) { .reference-research-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 768px) { .archive { padding-right: 200px; } }
+/* Balanced desktop content width: extend content smoothly to the right and eliminate artificial blank margins */
+@media (min-width: 768px) {
+  .archive {
+    padding-right: 0;
+  }
+}
+
+@include breakpoint($large) {
+  .page {
+    @include span(10 of 12 last);
+    @include prefix(0.5 of 12);
+    @include suffix(0.35 of 12);
+  }
+}
 
 /* Full text CV keeps the reference page frame and typography. */
 .moderncv-container { line-height: 1.5; }
