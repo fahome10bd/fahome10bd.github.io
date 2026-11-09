@@ -99,8 +99,11 @@ body { padding-top: 0 !important; }
     @include span(10 of 12 last);
     @include prefix(0.3 of 12);
     @include suffix(0 of 12);
-    padding-right: 0 !important;
+    padding-right: 1in !important;
     margin-right: 0 !important;
+  }
+  .archive {
+    padding-right: 1in !important;
   }
 }
 
