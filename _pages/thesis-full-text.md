@@ -23,3 +23,4 @@ author_profile: true
 <div style="position: relative; width: 100%; height: 850px; border: 1px solid #e1e4e8; border-radius: 4px; overflow: hidden; margin-top: 1.5em;">
   <iframe src="{{ '/files/Mohammad_Mahmudul_Hasan_BSc_Thesis.pdf' | relative_url }}" width="100%" height="100%" style="border: none;" title="Thesis Document Viewer"></iframe>
 </div>
+

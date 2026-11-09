@@ -8,42 +8,48 @@ author_profile: true
 
 {% assign conf_papers = site.publications | where: 'category', 'conferences' %}
 {% if conf_papers.size > 0 %}
-<h2 id="peer-reviewed-conference-papers">Peer-Reviewed Conference Papers</h2>
-{% for post in conf_papers reversed %}
-<div class="list__item">
-  <article class="archive__item">
-    <h3 class="archive__item-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-    <p>Tasnim Sakib Apon, <b>Mohammad Mahmudul Hasan</b>, Abrar Islam, and Md. Golam Rabiul Alam. “Demystifying Deep Learning Models for Retinal OCT Disease Classification using Explainable AI.” <i>2021 IEEE Asia-Pacific Conference on Computer Science and Data Engineering (CSDE).</i></p>
-    <p><b>DOI:</b> <a href="https://doi.org/10.1109/CSDE53843.2021.9718400">10.1109/CSDE53843.2021.9718400</a> · <b>Preprint:</b> <a href="https://arxiv.org/abs/2111.03890">arXiv:2111.03890</a> · <b>Field:</b> Medical Imaging & Explainable AI (LIME)</p>
-  </article>
-</div>
-{% endfor %}
+<section class="pub-group pub-group-conf" aria-labelledby="peer-reviewed-conference-papers">
+  <h2 id="peer-reviewed-conference-papers"><i class="fas fa-award icon-pad-right" aria-hidden="true"></i>Peer-Reviewed Conference Papers</h2>
+  {% for post in conf_papers reversed %}
+  <div class="list__item">
+    <article class="archive__item">
+      <h3 class="archive__item-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+      <p>Tasnim Sakib Apon, <b>Mohammad Mahmudul Hasan</b>, Abrar Islam, and Md. Golam Rabiul Alam. “Demystifying Deep Learning Models for Retinal OCT Disease Classification using Explainable AI.” <i>2021 IEEE Asia-Pacific Conference on Computer Science and Data Engineering (CSDE).</i></p>
+      <p><b>DOI:</b> <a href="https://doi.org/10.1109/CSDE53843.2021.9718400">10.1109/CSDE53843.2021.9718400</a> · <b>Preprint:</b> <a href="https://arxiv.org/abs/2111.03890">arXiv:2111.03890</a> · <b>Field:</b> Medical Imaging &amp; Explainable AI (LIME)</p>
+    </article>
+  </div>
+  {% endfor %}
+</section>
 {% endif %}
 
 {% assign other_papers = site.publications | where: 'category', 'papers' %}
 {% if other_papers.size > 0 %}
-<h2 id="research-manuscripts-and-technical-reports">Research Manuscripts & Technical Papers</h2>
-{% for post in other_papers reversed %}
-<div class="list__item">
-  <article class="archive__item">
-    <h3 class="archive__item-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-    <p>Fatema Zerin Prottasha and <b>Mohammad Mahmudul Hasan</b>. “An Automated Rule-Based Fault Detection Method for Rotating Machines Using Accelerometer Vibration Signal Analysis.” <i>Research Manuscript / Technical Report, Department of EEE, Islamic University of Technology (IUT).</i></p>
-    <p><b>Platform:</b> <a href="https://www.researchgate.net/profile/Mohammad-Mahmudul-Hasan-3">ResearchGate</a> · <b>Benchmark:</b> 95%+ Fault Extraction Precision · <b>Focus:</b> Vibration Signal Processing (FFT, Order Analysis & Rule Engine)</p>
-  </article>
-</div>
-{% endfor %}
+<section class="pub-group pub-group-manuscript" aria-labelledby="research-manuscripts-and-technical-reports">
+  <h2 id="research-manuscripts-and-technical-reports"><i class="fas fa-file-lines icon-pad-right" aria-hidden="true"></i>Research Manuscripts &amp; Technical Papers</h2>
+  {% for post in other_papers reversed %}
+  <div class="list__item">
+    <article class="archive__item">
+      <h3 class="archive__item-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+      <p>Fatema Zerin Prottasha and <b>Mohammad Mahmudul Hasan</b>. “An Automated Rule-Based Fault Detection Method for Rotating Machines Using Accelerometer Vibration Signal Analysis.” <i>Research Manuscript / Technical Report, Department of EEE, Islamic University of Technology (IUT).</i></p>
+      <p><b>Platform:</b> <a href="https://www.researchgate.net/profile/Mohammad-Mahmudul-Hasan-3">ResearchGate</a> · <b>Benchmark:</b> 95%+ Fault Extraction Precision · <b>Focus:</b> Vibration Signal Processing (FFT, Order Analysis &amp; Rule Engine)</p>
+    </article>
+  </div>
+  {% endfor %}
+</section>
 {% endif %}
 
 {% assign theses = site.publications | where: 'category', 'thesis' %}
 {% if theses.size > 0 %}
-<h2 id="academic-theses">Academic Theses</h2>
-{% for post in theses reversed %}
-<div class="list__item">
-  <article class="archive__item">
-    <h3 class="archive__item-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-    <p><b>Mohammad Mahmudul Hasan</b>. “Quantifying Locomotive Features in EEG of Impaired Consciousness (Coma) with Distinctive Cerebral Rhythms.” <i>B.Sc. in Electrical and Electronic Engineering Undergraduate Thesis, Islamic University of Technology (IUT), March 2021 (Grade: A+).</i></p>
-    <p><b>Degree & Grade:</b> B.Sc. in EEE (Grade: A+) · <b>Repository:</b> <a href="https://repository.iutoic-dhaka.edu/items/e79be58c-22b4-4817-9329-05b0915d8160">IUT Institutional Repository</a> · <b>Focus:</b> Quantitative EEG Signal Processing & Cerebral Dynamics</p>
-  </article>
-</div>
-{% endfor %}
+<section class="pub-group pub-group-thesis" aria-labelledby="academic-theses">
+  <h2 id="academic-theses"><i class="fas fa-graduation-cap icon-pad-right" aria-hidden="true"></i>Academic Theses</h2>
+  {% for post in theses reversed %}
+  <div class="list__item">
+    <article class="archive__item">
+      <h3 class="archive__item-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+      <p><b>Mohammad Mahmudul Hasan</b>. “Quantifying Locomotive Features in EEG of Impaired Consciousness (Coma) with Distinctive Cerebral Rhythms.” <i>B.Sc. in Electrical and Electronic Engineering Undergraduate Thesis, Islamic University of Technology (IUT), March 2021 (Grade: A+).</i></p>
+      <p><b>Degree &amp; Grade:</b> B.Sc. in EEE (Grade: A+) · <b>Repository:</b> <a href="https://repository.iutoic-dhaka.edu/items/e79be58c-22b4-4817-9329-05b0915d8160">IUT Institutional Repository</a> · <b>Focus:</b> Quantitative EEG Signal Processing &amp; Cerebral Dynamics</p>
+    </article>
+  </div>
+  {% endfor %}
+</section>
 {% endif %}
