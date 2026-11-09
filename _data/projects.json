@@ -1,94 +1,115 @@
 {
+  "traffic-sign-inspection": {
+    "title": "Street-view GeoAI and asset localization",
+    "summary": "End-to-end GeoAI pipeline for detection and geospatial localization of 130 traffic sign and 33 street furniture classes from 360° street imagery.",
+    "context": "Professional work · HawarIT Limited",
+    "role": "AI engineering and system development",
+    "order": 1,
+    "featured": true,
+    "research_anchor": "4-point-cloud-intelligence--spatial-understanding",
+    "track_name": "Track 1: Computer Vision & Deep Learning",
+    "track_url": "/portfolio/computer-vision/",
+    "blocks": [
+      {
+        "type": "text",
+        "heading": "Problem Description & Context",
+        "body": "Municipalities and road authorities require accurate, up-to-date inventories of traffic signs, road markings, and roadside furniture. Traditional field surveying is notoriously slow, costly, and hazardous for crews operating along busy arterial roadways. Automated mobile mapping using car-mounted 360° cameras offers high coverage, but manually inspecting millions of panoramic frames creates an insurmountable manual bottleneck."
+      },
+      {
+        "type": "text",
+        "heading": "Technical Challenges & Approaches",
+        "body": "Engineered a high-throughput deep learning and multi-view triangulation pipeline:\n\n- **Asset Detection & Multi-Class Classification:** Trained custom YOLOv5 models robust to motion blur, occlusions, changing weather, and viewpoint shifts across **130 distinct traffic sign categories** and **33 street furniture classes**.\n- **Temporal Tracking & Geospatial Localization:** Coupled visual detections across sequential frames using vehicle trajectory telemetry, GPS/IMU logs, and epipolar triangulation to estimate real-world 3D coordinates."
+      },
+      {
+        "type": "text",
+        "heading": "System Architecture & Visual Diagrams",
+        "body": "*[Architecture Diagram Placeholder: End-to-end GeoAI pipeline — 360° camera video ingest, spherical unwarping, YOLOv5 inference engine, multi-view ray intersection, spatial clustering, and PostGIS geodatabase export.]*"
+      },
+      {
+        "type": "text",
+        "heading": "Effects & Quantitative Results",
+        "body": "The deployed GeoAI solution delivered:\n\n- **>95% object detection accuracy** across challenging urban lighting environments.\n- **92% geospatial localization precision**, aligning detected assets within sub-meter GIS survey thresholds.\n- Eliminated hundreds of hours of manual field inspection, converting raw video logs into structured, GIS-ready asset inventories."
+      },
+      {
+        "type": "text",
+        "heading": "Conclusion & Key Takeaways",
+        "body": "Combining deep convolutional object detectors with rigorous geometric camera projective models provides the optimal bridge between 2D computer vision and production-grade geospatial asset inventories."
+      }
+    ]
+  },
   "building-change": {
     "title": "Multi-temporal building change detection",
     "summary": "Deep learning change detection system identifying building extensions, new constructions, and demolitions from multi-year orthophotos.",
     "context": "Professional work · HawarIT Limited",
     "role": "AI engineering and system development",
-    "order": 1,
+    "order": 2,
     "featured": true,
     "research_anchor": "3-remote-sensing--spatiotemporal-change-detection",
+    "track_name": "Track 1: Computer Vision & Deep Learning",
+    "track_url": "/portfolio/computer-vision/",
     "blocks": [
       {
         "type": "text",
-        "heading": "My contribution",
-        "body": "At HawarIT Limited, I developed and deployed an automated multi-temporal change detection system using deep learning to identify building extensions, new constructions, and demolitions from multi-year orthophoto surveys."
+        "heading": "Problem Description & Context",
+        "body": "Accurate monitoring of urban sprawl, unpermitted construction, and municipal infrastructure alterations requires comparing high-resolution aerial orthophoto surveys flown across multiple years. Manual photo interpretation across entire regions is slow, expensive, and subject to visual fatigue."
       },
       {
         "type": "text",
-        "heading": "Deep Learning Architecture",
-        "body": "Designed convolutional neural network pipelines trained on multi-temporal, high-resolution aerial imagery to distinguish actual structural changes from seasonal variations, differing illumination, and sensor viewpoints."
+        "heading": "Technical Challenges & Approaches",
+        "body": "Designed convolutional neural network pipelines trained on multi-temporal, high-resolution aerial imagery to distinguish actual structural changes from seasonal variations, differing illumination, vegetation growth, and sensor viewpoints. Integrated the automated detection pipeline into an interactive GIS-based web validation platform for cartographic reviewers."
       },
       {
         "type": "text",
-        "heading": "GIS Web Platform Integration",
-        "body": "Integrated the automated detection pipeline into an interactive GIS-based web validation platform for cartographic reviewers."
+        "heading": "System Architecture & Visual Diagrams",
+        "body": "*[Architecture Diagram Placeholder: Multi-temporal change detection pipeline — co-registered ortho pairs, dual-branch Siamese convolutional encoder, difference feature aggregation, morphological post-processing, and polygon change boundary extraction.]*"
       },
       {
         "type": "text",
-        "heading": "Quantitative Results",
-        "body": "Achieved **88% detection accuracy** across varied urban landscapes, reducing manual inspection and verification efforts by **65%**."
+        "heading": "Effects & Quantitative Results",
+        "body": "Achieved **88% detection accuracy** across varied urban and peri-urban landscapes, reducing manual inspection and verification efforts by **65%**."
+      },
+      {
+        "type": "text",
+        "heading": "Conclusion & Key Takeaways",
+        "body": "Feature-level differential learning combined with robust geometric image pre-registration prevents pseudo-change false alarms caused by solar angle differences and camera orientation."
       }
     ]
   },
-  "eeg-research": {
-    "title": "Locomotive features in EEG of impaired consciousness",
-    "summary": "Undergraduate thesis at IUT on analyzing EEG time-series signals and distinctive cerebral rhythms in impaired consciousness (coma).",
-    "context": "Undergraduate research · IUT",
-    "role": "B.Sc. thesis researcher",
-    "order": 6,
+  "retinal-oct-dl": {
+    "title": "Retinal OCT Disease Classification with Explainable AI",
+    "summary": "Deep learning classification of retinal optical coherence tomography scans using LIME for transparent visual model explanations.",
+    "context": "Academic research · IEEE CSDE 2021",
+    "role": "Co-author and deep learning researcher",
+    "order": 3,
     "featured": false,
-    "research_anchor": "biomedical-signal-processing",
+    "research_anchor": "",
+    "track_name": "Track 1: Computer Vision & Deep Learning",
+    "track_url": "/portfolio/computer-vision/",
     "blocks": [
       {
         "type": "text",
-        "heading": "Academic context",
-        "body": "My undergraduate B.Sc. thesis in Electrical and Electronic Engineering at the Islamic University of Technology (IUT) investigated:\n\n**\"Quantifying Locomotive Features in EEG of Impaired Consciousness (Coma) with Distinctive Cerebral Rhythms\"**"
+        "heading": "Problem Description & Context",
+        "body": "Deep learning models achieve high diagnostic accuracy in classifying retinal conditions—such as Choroidal Neovascularization (CNV), Diabetic Macular Edema (DME), and Drusen—from Optical Coherence Tomography (OCT) scans. However, clinical adoption remains heavily bottlenecked by the black-box nature of deep neural networks, where clinicians cannot verify the underlying diagnostic rationale."
       },
       {
         "type": "text",
-        "heading": "Signal Analysis",
-        "body": "Analyzed clinical EEG time-series signals to identify discriminative spectral and temporal features characterizing depths of consciousness and coma states."
+        "heading": "Technical Challenges & Approaches",
+        "body": "Implemented transfer learning architectures using deep convolutional backbones and integrated Local Interpretable Model-agnostic Explanations (LIME). This technique generates localized super-pixel attribution masks, highlighting the exact anatomical retinal layers and lesion boundaries that drive model predictions."
       },
       {
         "type": "text",
-        "heading": "Rhythm Decomposition",
-        "body": "Extracted distinctive cerebral rhythms across patient recordings, developing algorithmic criteria to evaluate rhythmic variability and state transitions."
+        "heading": "System Architecture & Visual Diagrams",
+        "body": "*[Architecture Diagram Placeholder: Retinal OCT classification & explainability architecture — OCT scan normalization, CNN feature extractor, multi-class prediction, and LIME perturbation attribution heatmaps.]*"
       },
       {
         "type": "text",
-        "heading": "Academic Distinction",
-        "body": "Evaluated under both Project and Thesis courses at IUT, receiving the highest grade of **A+** for research rigor."
-      }
-    ]
-  },
-  "gis-digitization": {
-    "title": "Large-scale 3D CityGML modeling and texture projection",
-    "summary": "Automated pipeline for 3D CityGML reconstruction and photorealistic texture generation from high-resolution aerial imagery.",
-    "context": "Professional work · HawarIT Limited",
-    "role": "AI engineering and system development",
-    "order": 4,
-    "featured": false,
-    "research_anchor": "2-intelligent-3d-spatial-modeling--digital-twins",
-    "blocks": [
-      {
-        "type": "text",
-        "heading": "My contribution",
-        "body": "At HawarIT Limited, I built an automated pipeline for large-scale 3D CityGML reconstruction and photorealistic texture generation from high-resolution aerial surveys."
+        "heading": "Effects & Quantitative Results",
+        "body": "Validated on benchmark OCT datasets, achieving high diagnostic sensitivity and specificity while providing ophthalmologists with interpretable visual explanations that corroborate recognized clinical biomarkers (published at IEEE CSDE 2021)."
       },
       {
         "type": "text",
-        "heading": "Automated 3D Reconstruction",
-        "body": "Developed algorithms converting 2D footprint geometries and elevation models into semantic 3D CityGML building representations at scale."
-      },
-      {
-        "type": "text",
-        "heading": "Occlusion-Aware Multi-View Texture Projection",
-        "body": "Designed custom texture projection algorithms that dynamically evaluate viewing angles, occlusions, and image resolution to project aerial imagery onto 3D building facades."
-      },
-      {
-        "type": "text",
-        "heading": "Quantitative Results",
-        "body": "Maintained strict geometric alignment with a **texture shift of less than 3 pixels**, generating high-fidelity photorealistic urban digital twin models for municipal planning."
+        "heading": "Conclusion & Key Takeaways",
+        "body": "Explainable AI is indispensable for translational medical diagnostics; interpretable attribution maps provide verifiable clinical pathways rather than opaque numeric confidence scores."
       }
     ]
   },
@@ -97,29 +118,74 @@
     "summary": "Automated orthophoto production with AI image quality assessment (97%), PostGIS/AHN seamline optimization, and 2-pixel camera pose estimation.",
     "context": "Professional work · HawarIT Limited",
     "role": "AI engineering and system development",
-    "order": 3,
+    "order": 4,
     "featured": true,
     "research_anchor": "1-orthophoto-pipeline-automation",
+    "track_name": "Track 2: Photogrammetry & 3D Spatial Reconstruction",
+    "track_url": "/portfolio/photogrammetry-3d/",
     "blocks": [
       {
         "type": "text",
-        "heading": "My contribution",
-        "body": "At HawarIT Limited, I architected and implemented AI-based automation tools across the photogrammetric orthophoto production lifecycle, eliminating critical manual bottlenecks in image filtering, triangulation, and seamline generation."
+        "heading": "Problem Description & Context",
+        "body": "Production of high-resolution country-wide orthophoto mosaics involves thousands of raw aerial frames. Quality assessment (detecting cloud cover, shadows, blur) and initial camera pose estimation traditionally require extensive manual inspection and tedious tie-point editing."
       },
       {
         "type": "text",
-        "heading": "AI-Based Image Quality Assessment (QA)",
-        "body": "Developed deep learning models to detect cloud, shadow, and blur artifacts on raw aerial imagery prior to aerial triangulation (AT), achieving **97% QA accuracy**."
+        "heading": "Technical Challenges & Approaches",
+        "body": "Architected and implemented AI-based automation tools across the photogrammetric orthophoto production lifecycle:\n\n- **AI-Based Image Quality Assessment (QA):** Developed deep learning models to detect cloud, shadow, and blur artifacts on raw aerial imagery prior to aerial triangulation (AT).\n- **Automated Camera Pose Estimation:** Engineered a feature-matching and tie-point generation framework to register incoming flight images against historical reference orthophotos.\n- **Elevation-Guided Seamline Optimization:** Automated seamline placement and geometric validation using PostgreSQL/PostGIS paired with AHN airborne LiDAR elevation data."
       },
       {
         "type": "text",
-        "heading": "Automated Camera Pose Estimation",
-        "body": "Engineered a feature-matching and tie-point generation framework to register incoming flight images against historical reference orthophotos. Attained **2-pixel alignment accuracy**, cutting manual aerial triangulation effort by **90%**."
+        "heading": "System Architecture & Visual Diagrams",
+        "body": "*[Architecture Diagram Placeholder: Photogrammetric workflow — raw frame ingestion, automated QA screening, feature matching & bundle adjustment, and orthomosaic generation.]*"
       },
       {
         "type": "text",
-        "heading": "Seamline Refinement via PostGIS & AHN LiDAR",
-        "body": "Automated seamline placement and geometric validation using PostgreSQL/PostGIS paired with AHN airborne LiDAR elevation data, cutting manual seamline editing by **65%**."
+        "heading": "Effects & Quantitative Results",
+        "body": "The automated photogrammetry pipeline achieved:\n\n- **97% QA classification accuracy** for atmospheric defects.\n- **2-pixel camera alignment accuracy**, cutting manual aerial triangulation effort by **90%**.\n- Reduced manual seamline editing by **65%**."
+      },
+      {
+        "type": "text",
+        "heading": "Conclusion & Key Takeaways",
+        "body": "Injecting computer vision feature matching into classical photogrammetric bundle adjustment removes the most time-consuming manual intervention in large-scale aerial cartography."
+      }
+    ]
+  },
+  "gis-digitization": {
+    "title": "Large-scale 3D CityGML modeling and texture projection",
+    "summary": "Automated pipeline for 3D CityGML reconstruction and photorealistic texture generation from high-resolution aerial imagery.",
+    "context": "Professional work · HawarIT Limited",
+    "role": "AI engineering and system development",
+    "order": 5,
+    "featured": false,
+    "research_anchor": "2-intelligent-3d-spatial-modeling--digital-twins",
+    "track_name": "Track 2: Photogrammetry & 3D Spatial Reconstruction",
+    "track_url": "/portfolio/photogrammetry-3d/",
+    "blocks": [
+      {
+        "type": "text",
+        "heading": "Problem Description & Context",
+        "body": "Modern municipal digital twins require semantic 3D building models (CityGML) with photorealistic textured facades for urban planning, solar potential modeling, and environmental simulation. Manually projecting aerial imagery onto 3D building meshes is slow and prone to severe perspective distortion and occlusions."
+      },
+      {
+        "type": "text",
+        "heading": "Technical Challenges & Approaches",
+        "body": "Built an automated pipeline for large-scale 3D CityGML reconstruction and photorealistic texture generation:\n\n- **Automated 3D Reconstruction:** Developed algorithms converting 2D footprint geometries and elevation models into semantic 3D CityGML building representations at scale.\n- **Occlusion-Aware Multi-View Texture Projection:** Designed custom texture projection algorithms that dynamically evaluate viewing angles, occlusions, and image resolution to project aerial imagery onto 3D building facades."
+      },
+      {
+        "type": "text",
+        "heading": "System Architecture & Visual Diagrams",
+        "body": "*[Architecture Diagram Placeholder: 3D CityGML pipeline — 2D cadastral footprint input, LiDAR height extrusion, LoD2 roof generation, multi-view ray visibility testing, and texture UV atlas baking.]*"
+      },
+      {
+        "type": "text",
+        "heading": "Effects & Quantitative Results",
+        "body": "Maintained strict geometric alignment with a **texture shift of less than 3 pixels**, generating high-fidelity photorealistic urban digital twin models across municipal districts."
+      },
+      {
+        "type": "text",
+        "heading": "Conclusion & Key Takeaways",
+        "body": "Ray-traced visibility culling is essential when texturing 3D building facades from oblique aerial views to prevent roof overhangs and neighboring structures from projecting false textures."
       }
     ]
   },
@@ -128,29 +194,36 @@
     "summary": "AI-driven semantic segmentation and BIM model extraction from aerial, mobile, and indoor LiDAR datasets.",
     "context": "Professional work · HawarIT Limited",
     "role": "AI engineering and system development",
-    "order": 2,
+    "order": 6,
     "featured": true,
     "research_anchor": "4-point-cloud-intelligence--spatial-understanding",
+    "track_name": "Track 2: Photogrammetry & 3D Spatial Reconstruction",
+    "track_url": "/portfolio/photogrammetry-3d/",
     "blocks": [
       {
         "type": "text",
-        "heading": "My contribution",
-        "body": "At HawarIT Limited, I led the development of point cloud intelligence algorithms for semantic segmentation and automated Building Information Modeling (BIM) extraction from large-scale LiDAR datasets."
+        "heading": "Problem Description & Context",
+        "body": "Laser scanners generate billions of raw 3D spatial points (LiDAR). Converting these unorganized point clouds into parametric Building Information Modeling (BIM) objects—such as walls, structural columns, and MEP piping systems—has traditionally been a labor-intensive manual CAD tracing process."
       },
       {
         "type": "text",
-        "heading": "Multi-Source LiDAR Processing",
-        "body": "Built processing pipelines handling dense 3D point clouds across diverse acquisition platforms: aerial surveys, mobile vehicle-mounted mapping systems, and high-precision indoor laser scanners."
+        "heading": "Technical Challenges & Approaches",
+        "body": "Developed point cloud intelligence algorithms for semantic segmentation and automated BIM extraction:\n\n- **Multi-Source LiDAR Processing:** Built processing pipelines handling dense 3D point clouds across diverse acquisition platforms: aerial surveys, mobile vehicle-mounted mapping systems, and high-precision indoor laser scanners.\n- **Automated Pipe & Geometry Extraction:** Implemented custom algorithms to detect industrial and building piping networks, segment structural components, and extract geometric properties directly from unstructured 3D point data."
       },
       {
         "type": "text",
-        "heading": "Automated Pipe & Geometry Extraction",
-        "body": "Implemented custom algorithms to detect industrial and building piping networks, segment structural components, and extract geometric properties directly from unstructured 3D point data."
+        "heading": "System Architecture & Visual Diagrams",
+        "body": "*[Architecture Diagram Placeholder: Point cloud processing pipeline — voxel downsampling, normal vector estimation, RANSAC cylindrical/planar decomposition, and IFC/BIM parametric export.]*"
       },
       {
         "type": "text",
-        "heading": "Quantitative Results",
-        "body": "Achieved **95% extraction accuracy** while cutting manual 3D modeling and processing time by **60%**."
+        "heading": "Effects & Quantitative Results",
+        "body": "Achieved **95% extraction accuracy** while cutting manual 3D modeling and CAD drafting time by **60%** across complex industrial facility scans."
+      },
+      {
+        "type": "text",
+        "heading": "Conclusion & Key Takeaways",
+        "body": "Combining statistical point cloud spatial clustering with robust geometric primitive fitting provides a scalable foundation for automated scan-to-BIM digital transformation."
       }
     ]
   },
@@ -162,57 +235,223 @@
     "order": 7,
     "featured": false,
     "research_anchor": "3-remote-sensing--spatiotemporal-change-detection",
+    "track_name": "Track 3: Geographic Information Systems (GIS) & Remote Sensing",
+    "track_url": "/portfolio/gis-remote-sensing/",
     "blocks": [
       {
         "type": "text",
-        "heading": "My contribution",
-        "body": "Deployed AI solutions leveraging European Space Agency (ESA) Sentinel multispectral satellite imagery for large-scale Earth observation, environmental monitoring, and natural resource management."
+        "heading": "Problem Description & Context",
+        "body": "Environmental degradation, water pollution, and agricultural resource stress require frequent, wide-area monitoring. Earth observation satellites provide continuous coverage, but transforming raw multispectral radiation bands into actionable environmental intelligence demands automated spectral analytics."
       },
       {
         "type": "text",
-        "heading": "Multispectral Analytics",
-        "body": "Engineered computer vision pipelines operating across Sentinel-2 optical and infrared spectral bands to analyze vegetative indices, crop phenology, and surface water dynamics."
+        "heading": "Technical Challenges & Approaches",
+        "body": "Deployed AI solutions leveraging European Space Agency (ESA) Sentinel-2 multispectral satellite imagery:\n\n- **Multispectral Analytics:** Engineered computer vision pipelines operating across Sentinel-2 optical and infrared spectral bands to analyze vegetative indices (NDVI, EVI), crop phenology, and surface water dynamics.\n- **Environmental Monitoring:** Built multi-class deep learning models for automated crop type classification, water body delineation, and harmful algae bloom detection across inland water bodies."
       },
       {
         "type": "text",
-        "heading": "Environmental Monitoring",
-        "body": "Built multi-class deep learning models for automated crop type classification, water body delineation, and harmful algae bloom detection across aquatic ecosystems."
+        "heading": "System Architecture & Visual Diagrams",
+        "body": "*[Architecture Diagram Placeholder: Earth observation pipeline — Sentinel-2 L2A ingest, atmospheric correction, spectral index computation, deep segmentation classifier, and interactive geospatial dashboard.]*"
       },
       {
         "type": "text",
-        "heading": "International Recognition",
-        "body": "This Earth observation analytics framework secured **2nd place in an international innovation tender**.\n\nIn addition to satellite remote sensing, my open-source computer vision contributions include a multi-label vehicle and traffic detection framework:\n\n- [Multi-Label Vehicle Detection Repository](https://github.com/fahome10bd/Multi-Label-Vehicle-detection-based-on-AI) (comparisons of YOLOv3, YOLOv5, and R-CNN architectures across 21 traffic classes)."
+        "heading": "Effects & Quantitative Results",
+        "body": "This Earth observation analytics framework secured **2nd place in an international innovation tender**, demonstrating high-precision surface water quality mapping and agricultural classification."
+      },
+      {
+        "type": "text",
+        "heading": "Conclusion & Key Takeaways",
+        "body": "Exploiting non-visible red-edge and short-wave infrared (SWIR) bands provides vital diagnostic discriminators for environmental and vegetative health that are completely missed by standard RGB imagery."
       }
     ]
   },
-  "traffic-sign-inspection": {
-    "title": "Street-view GeoAI and asset localization",
-    "summary": "End-to-end GeoAI pipeline for detection and geospatial localization of 130 traffic sign and 33 street furniture classes from 360° street imagery.",
+  "postgis-seamlines": {
+    "title": "PostGIS & AHN LiDAR Seamline Optimization Pipeline",
+    "summary": "Automated spatial database pipeline utilizing elevation models to optimize mosaic cutlines, avoiding high-relief structures and cutting manual seamline editing by 65%.",
     "context": "Professional work · HawarIT Limited",
-    "role": "AI engineering and system development",
-    "order": 5,
+    "role": "AI engineering and spatial database development",
+    "order": 8,
     "featured": false,
-    "research_anchor": "4-point-cloud-intelligence--spatial-understanding",
+    "research_anchor": "1-orthophoto-pipeline-automation",
+    "track_name": "Track 3: Geographic Information Systems (GIS) & Remote Sensing",
+    "track_url": "/portfolio/gis-remote-sensing/",
     "blocks": [
       {
         "type": "text",
-        "heading": "My contribution",
-        "body": "At HawarIT Limited, I engineered a comprehensive end-to-end GeoAI system for automated detection, classification, and geospatial localization of road and roadside infrastructure from car-mounted 360° street-view imagery."
+        "heading": "Problem Description & Context",
+        "body": "In large-scale aerial orthophoto mosaic generation, seamlines dividing adjacent overlapping flight swaths frequently slice through tall buildings, bridges, and infrastructure. This leads to conspicuous visual shear, duplicate structures, and perspective artifacts across municipal orthophoto deliverables."
       },
       {
         "type": "text",
-        "heading": "Asset Detection & Recognition",
-        "body": "Trained and optimized custom YOLOv5 models capable of recognizing **130 distinct traffic sign categories** and **33 street furniture classes** under varying lighting, weather, and occlusions."
+        "heading": "Technical Challenges & Approaches",
+        "body": "Engineered an automated spatial database optimization framework integrating PostgreSQL/PostGIS spatial operators with AHN (Actueel Hoogtebestand Nederland) airborne LiDAR elevation data. The pipeline calculates cost surfaces based on vertical elevation variance, guiding seamlines through natural ground-level paths (such as roads and open fields) and avoiding elevated structures."
       },
       {
         "type": "text",
-        "heading": "Geospatial Localization & Tracking",
-        "body": "Implemented custom multi-object tracking and triangulation algorithms to compute high-precision world coordinates for detected assets directly from vehicle GPS and camera trajectory telemetry."
+        "heading": "System Architecture & Visual Diagrams",
+        "body": "*[Architecture Diagram Placeholder: Spatial database seamline optimization — LiDAR Digital Surface Model (DSM) ingestion, obstacle cost raster calculation, PostGIS Voronoi/Dijkstra shortest-path routing, and automated vector seamline generation.]*"
       },
       {
         "type": "text",
-        "heading": "Quantitative Results",
-        "body": "Delivered **>95% object detection accuracy** and **92% geospatial localization precision**, transforming raw street video logs into structured, GIS-ready asset inventories."
+        "heading": "Effects & Quantitative Results",
+        "body": "The automated elevation-guided seamline placement reduced manual cartographic inspection and seamline adjustment by **65%**, while eliminating visible structural shearing across multi-square-kilometer urban surveys."
+      },
+      {
+        "type": "text",
+        "heading": "Conclusion & Key Takeaways",
+        "body": "Integrating high-precision 3D LiDAR height data into relational spatial databases transforms a traditionally laborious manual photogrammetric editing step into a deterministic, scalable spatial computing procedure."
+      }
+    ]
+  },
+  "vehicle-detection": {
+    "title": "Multi-Label Vehicle & Traffic Analytics Framework",
+    "summary": "Comparative deep learning benchmark of YOLO and R-CNN architectures across 21 vehicle categories with spatial trajectory analysis.",
+    "context": "Open-source research & development",
+    "role": "Lead researcher and developer",
+    "order": 9,
+    "featured": false,
+    "research_anchor": "",
+    "track_name": "Track 3: Geographic Information Systems (GIS) & Remote Sensing",
+    "track_url": "/portfolio/gis-remote-sensing/",
+    "blocks": [
+      {
+        "type": "text",
+        "heading": "Problem Description & Context",
+        "body": "Accurate multi-class vehicle detection and density estimation are critical for intelligent transportation systems (ITS) and traffic flow management. Real-world roadway video streams present challenges of occlusion, high variation in vehicle scale, and variable illumination."
+      },
+      {
+        "type": "text",
+        "heading": "Technical Challenges & Approaches",
+        "body": "Conducted an extensive empirical evaluation comparing single-stage (YOLOv3, YOLOv5) and two-stage (Faster R-CNN) object detectors trained across **21 distinct vehicle and traffic classes**. Optimized data augmentation pipelines, anchor box distributions, and inference runtimes for edge and server deployment environments.\n\nCode repository: [Multi-Label Vehicle Detection on GitHub](https://github.com/fahome10bd/Multi-Label-Vehicle-detection-based-on-AI)."
+      },
+      {
+        "type": "text",
+        "heading": "System Architecture & Visual Diagrams",
+        "body": "*[Architecture Diagram Placeholder: Multi-label traffic detection architecture — video stream frame extraction, anchor regression network, non-maximum suppression (NMS), and multi-class trajectory tracking.]*"
+      },
+      {
+        "type": "text",
+        "heading": "Effects & Quantitative Results",
+        "body": "Achieved real-time inference speeds with robust detection precision across congested urban roadway scenes, establishing clear trade-off benchmarks between computational latency and spatial bounding-box fidelity."
+      },
+      {
+        "type": "text",
+        "heading": "Conclusion & Key Takeaways",
+        "body": "Single-stage detectors provide the optimal speed-accuracy frontier for real-time edge streaming, while two-stage architectures offer superior recall for heavily occluded small-scale vehicles in dense bottlenecks."
+      }
+    ]
+  },
+  "eeg-research": {
+    "title": "Locomotive features in EEG of impaired consciousness",
+    "summary": "Undergraduate thesis at IUT on analyzing EEG time-series signals and distinctive cerebral rhythms in impaired consciousness (coma).",
+    "context": "Undergraduate research · IUT",
+    "role": "B.Sc. thesis researcher",
+    "order": 10,
+    "featured": false,
+    "research_anchor": "biomedical-signal-processing",
+    "track_name": "Track 4: Signal Processing & Biomedical Systems",
+    "track_url": "/portfolio/signal-processing/",
+    "blocks": [
+      {
+        "type": "text",
+        "heading": "Problem Description & Context",
+        "body": "Accurately assessing the depth of impaired consciousness in comatose patients is critical for prognostic evaluation and clinical intervention. Conventional bedside clinical assessments (such as the Glasgow Coma Scale) can be subjective, motivating quantitative mathematical analysis of neurophysiological electroencephalogram (EEG) signals."
+      },
+      {
+        "type": "text",
+        "heading": "Technical Challenges & Approaches",
+        "body": "Investigated in my undergraduate B.Sc. thesis in Electrical and Electronic Engineering at the Islamic University of Technology (IUT):\n\n**\"Quantifying Locomotive Features in EEG of Impaired Consciousness (Coma) with Distinctive Cerebral Rhythms\"**\n\n- **Signal Pre-Processing & Filtering:** Applied bandpass filtering and artifact rejection to isolate neural oscillations from ocular and myogenic interference.\n- **Spectral & Rhythm Decomposition:** Extracted canonical cerebral rhythms (delta, theta, alpha, beta) and evaluated spectral power distributions and temporal rhythm dynamics across patient cohorts."
+      },
+      {
+        "type": "text",
+        "heading": "System Architecture & Visual Diagrams",
+        "body": "*[Architecture Diagram Placeholder: EEG signal processing workflow — multi-channel acquisition, notch filtering, Fast Fourier Transform (FFT) spectral decomposition, rhythmic power ratio calculation, and coma depth metric extraction.]*"
+      },
+      {
+        "type": "text",
+        "heading": "Effects & Quantitative Results",
+        "body": "Demonstrated that distinctive cerebral rhythm transitions correlate with depth of consciousness, establishing quantitative markers for neurological state evaluation. Evaluated under both Project and Thesis courses at IUT, receiving the highest grade of **A+** for research rigor."
+      },
+      {
+        "type": "text",
+        "heading": "Conclusion & Key Takeaways",
+        "body": "Spectral power entropy and delta/alpha power ratios provide robust non-invasive quantitative indicators of cortical depression in impaired consciousness."
+      }
+    ]
+  },
+  "fault-detection": {
+    "title": "Automated Machine Fault Detection via Vibration Signal Analysis",
+    "summary": "Autonomous rule-based fault detection engine processing accelerometer vibration data to diagnose bearing, gear, and mechanical faults without manual intervention.",
+    "context": "Undergraduate research & signal processing",
+    "role": "Lead researcher and MATLAB developer",
+    "order": 11,
+    "featured": false,
+    "research_anchor": "biomedical-signal-processing",
+    "track_name": "Track 4: Signal Processing & Biomedical Systems",
+    "track_url": "/portfolio/signal-processing/",
+    "blocks": [
+      {
+        "type": "text",
+        "heading": "Problem Description & Context",
+        "body": "Rotating machinery in industrial manufacturing plants is prone to mechanical degradation across bearings, gear meshes, and rotating shafts. Conventional condition monitoring requires skilled vibration analysts to manually inspect Fourier frequency spectra, which is slow, expensive, and difficult to scale to 24/7 automated plant monitoring."
+      },
+      {
+        "type": "text",
+        "heading": "Technical Challenges & Approaches",
+        "body": "Engineered an autonomous diagnostic rule engine in MATLAB:\n\n- **Order Spectrum Analysis:** Converted time-domain accelerometer vibration signals via Discrete Fourier Transform (FFT) into shaft rotational speed multiples (×RPM orders), normalizing against speed fluctuations.\n- **Autonomous Decision Tree:** Formulated a structured decision engine that evaluates spectral energy against healthy baseline thresholds, classifying bearing (inner race, outer race, ball bearing), gear mesh, unbalance, and misalignment defects."
+      },
+      {
+        "type": "text",
+        "heading": "System Architecture & Visual Diagrams",
+        "body": "*[Architecture Diagram Placeholder: Automated fault detection architecture — accelerometer signal acquisition, windowed FFT order tracking, baseline normalization, automated harmonic peak extraction, and taxonomy-based fault classification tree.]*"
+      },
+      {
+        "type": "text",
+        "heading": "Effects & Quantitative Results",
+        "body": "The autonomous engine accurately diagnosed simulated and experimental mechanical fault conditions without human intervention, maintaining deterministic 100% reproducibility across standard test cases."
+      },
+      {
+        "type": "text",
+        "heading": "Conclusion & Key Takeaways",
+        "body": "Shaft order tracking combined with baseline-normalized harmonic thresholding provides an interpretable, mathematically transparent alternative to opaque neural network classifiers for industrial predictive maintenance."
+      }
+    ]
+  },
+  "cmbr-astrophysics": {
+    "title": "CMBR Primordial Signal Isolation & Sky-Map Generation",
+    "summary": "Filtering cosmological noise from fragmented WMAP satellite datasets to isolate primordial radiation and generate clean astronomical sky-maps.",
+    "context": "Undergraduate astrophysics & signal processing",
+    "role": "Signal processing researcher",
+    "order": 12,
+    "featured": false,
+    "research_anchor": "biomedical-signal-processing",
+    "track_name": "Track 4: Signal Processing & Biomedical Systems",
+    "track_url": "/portfolio/signal-processing/",
+    "blocks": [
+      {
+        "type": "text",
+        "heading": "Problem Description & Context",
+        "body": "The Cosmic Microwave Background Radiation (CMBR) contains the thermal imprint of the infant universe. However, satellite observations (such as NASA WMAP raw sensor feeds) are heavily obscured by bright synchrotron and dust emission from the Milky Way, instrument noise, and fragmented sky coverage."
+      },
+      {
+        "type": "text",
+        "heading": "Technical Challenges & Approaches",
+        "body": "Implemented statistical signal processing and calibration algorithms in MATLAB to isolate primordial cosmological signals:\n\n- **Multi-Frequency Channel Cleaning:** Processed disparate microwave radiometer feeds to calibrate sensor gain and remove localized instrument offsets.\n- **Galactic Noise Suppression:** Applied spatial and statistical filtering algorithms to attenuate high-intensity galactic plane noise while preserving microkelvin primordial temperature anisotropies."
+      },
+      {
+        "type": "text",
+        "heading": "System Architecture & Visual Diagrams",
+        "body": "*[Architecture Diagram Placeholder: Signal isolation pipeline — multi-frequency satellite raw data ingest, galactic foreground subtraction, spatial filtering, and spherical sky-map reconstruction.]*"
+      },
+      {
+        "type": "text",
+        "heading": "Effects & Quantitative Results",
+        "body": "Successfully generated clean, high-contrast primordial radiation sky-maps from raw observation datasets, revealing subtle temperature anisotropies with high statistical fidelity."
+      },
+      {
+        "type": "text",
+        "heading": "Conclusion & Key Takeaways",
+        "body": "Rigorous spatial signal processing and foreground noise modeling are essential for uncovering subtle primordial cosmological signals embedded in overwhelming galactic interference."
       }
     ]
   }

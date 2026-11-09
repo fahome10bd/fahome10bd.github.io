@@ -6,8 +6,17 @@ layout: single
 <div class="project-meta">
   <span>{{ project.context | escape }}</span>
   {% if project.role and project.role != '' %}<span>{{ project.role | escape }}</span>{% endif %}
+  {% if project.track_name and project.track_name != '' %}
+    <span><a href="{{ project.track_url | relative_url }}">{{ project.track_name | escape }}</a></span>
+  {% endif %}
 </div>
 {% include content-blocks.html blocks=project.blocks %}
-{% if project.research_anchor and project.research_anchor != '' %}
-  <p class="content-next"><a href="{{ '/research/' | relative_url }}#{{ project.research_anchor | escape }}">Related research direction</a> · <a href="{{ '/portfolio/' | relative_url }}">All projects</a></p>
-{% endif %}
+<p class="content-next">
+  {% if project.track_url and project.track_url != '' %}
+    <a href="{{ project.track_url | relative_url }}">&larr; Back to {{ project.track_name | escape }}</a> ·
+  {% endif %}
+  <a href="{{ '/portfolio/' | relative_url }}">All Project Tracks</a>
+  {% if project.research_anchor and project.research_anchor != '' %}
+    · <a href="{{ '/research/' | relative_url }}#{{ project.research_anchor | escape }}">Related Research</a>
+  {% endif %}
+</p>
