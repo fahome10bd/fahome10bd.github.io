@@ -17,4 +17,11 @@ excerpt: "Co-authored study of retinal OCT disease classification and LIME-based
 
 **Author preprint:** [arXiv:2111.03890](https://arxiv.org/abs/2111.03890)
 
-This co-authored paper studies deep-learning classification of retinal optical coherence tomography images and uses LIME to support interpretation. The conference paper and the preprint are the same publication.
+### Abstract
+
+Optical Coherence Tomography (OCT) has become a standard diagnostic imaging modality in ophthalmology for detecting retinal pathologies such as choroidal neovascularization (CNV), diabetic macular edema (DME), and drusen. While deep learning models achieve high classification accuracies on OCT scans, their black-box nature hinders clinical adoption. In this study, we demystify deep convolutional architectures for retinal OCT disease classification by incorporating Local Interpretable Model-agnostic Explanations (LIME) to provide transparent, interpretable visual explanations of the model predictions.
+
+<p style="margin-top: 2em;">
+  <a class="btn btn--primary btn--large" href="https://arxiv.org/pdf/2111.03890" target="_blank" rel="noopener">Read full text (Author preprint PDF via arXiv) &rarr;</a>
+  <a class="btn btn--inverse btn--large" href="https://doi.org/10.1109/CSDE53843.2021.9718400" target="_blank" rel="noopener">Read at IEEE Xplore (DOI) &rarr;</a>
+</p>
