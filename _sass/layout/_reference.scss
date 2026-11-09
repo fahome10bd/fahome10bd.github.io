@@ -123,6 +123,11 @@ body { padding-top: 0 !important; }
   .archive {
     padding-right: 1in !important;
   }
+
+  /* About page only: increase right-side blank space by 3.5 inches */
+  body.reference-home .page {
+    padding-right: 3.5in !important;
+  }
 }
 
 /* Full text CV keeps the reference page frame and typography. */
