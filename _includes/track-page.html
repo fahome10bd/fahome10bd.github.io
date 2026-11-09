@@ -1,0 +1,56 @@
+{% assign track = site.data.tracks | where: "id", include.track_id | first %}
+
+<p><a href="{{ '/portfolio/' | relative_url }}">&larr; Back to All Project Tracks</a></p>
+
+<h2>{{ track.title | escape }}</h2>
+
+{% if track.image and track.image != '' %}
+  <p><img src="{{ track.image | relative_url }}" alt="{{ track.title | escape }}" class="track-hero-image" loading="lazy"></p>
+{% endif %}
+
+{% if track.focus and track.focus != '' %}
+  <p class="project-summary"><strong>Research &amp; Engineering Focus:</strong> {{ track.focus | escape }}</p>
+{% endif %}
+
+{% for project in track.projects %}
+  <div class="track-project-item">
+    <h2><a href="{{ project.url | relative_url }}">{{ project.title | escape }}</a></h2>
+
+    {% if project.image and project.image != '' %}
+      <div class="track-project-image-wrap">
+        <a href="{{ project.url | relative_url }}">
+          <img src="{{ project.image | relative_url }}" alt="{{ project.title | escape }}" class="track-project-image" loading="lazy">
+        </a>
+      </div>
+    {% endif %}
+
+    {% assign has_meta = false %}
+    {% if project.solved_problem and project.solved_problem != '' %}{% assign has_meta = true %}{% endif %}
+    {% if project.features and project.features != '' %}{% assign has_meta = true %}{% endif %}
+    {% if project.technology and project.technology != '' %}{% assign has_meta = true %}{% endif %}
+    {% if project.academic_theory and project.academic_theory != '' %}{% assign has_meta = true %}{% endif %}
+
+    {% if has_meta %}
+      <div class="track-project-meta">
+        {% if project.solved_problem and project.solved_problem != '' %}
+          <span><strong>Solved Problem:</strong> {{ project.solved_problem | escape }}</span>
+        {% endif %}
+        {% if project.features and project.features != '' %}
+          <span><strong>Features:</strong> {{ project.features | escape }}</span>
+        {% endif %}
+        {% if project.technology and project.technology != '' %}
+          <span><strong>Technology:</strong> {{ project.technology | escape }}</span>
+        {% endif %}
+        {% if project.academic_theory and project.academic_theory != '' %}
+          <span><strong>Academic Theory:</strong> {{ project.academic_theory | escape }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if project.description and project.description != '' %}
+      <p>{{ project.description | escape }}</p>
+    {% endif %}
+
+    <p><a class="btn btn--primary" href="{{ project.url | relative_url }}">View Full Project Details &rarr;</a></p>
+  </div>
+{% endfor %}

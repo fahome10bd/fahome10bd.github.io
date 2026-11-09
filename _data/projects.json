@@ -22,11 +22,6 @@
       },
       {
         "type": "text",
-        "heading": "System Architecture & Visual Diagrams",
-        "body": "*[Architecture Diagram Placeholder: End-to-end GeoAI pipeline — 360° camera video ingest, spherical unwarping, YOLOv5 inference engine, multi-view ray intersection, spatial clustering, and PostGIS geodatabase export.]*"
-      },
-      {
-        "type": "text",
         "heading": "Effects & Quantitative Results",
         "body": "The deployed GeoAI solution delivered:\n\n- **>95% object detection accuracy** across challenging urban lighting environments.\n- **92% geospatial localization precision**, aligning detected assets within sub-meter GIS survey thresholds.\n- Eliminated hundreds of hours of manual field inspection, converting raw video logs into structured, GIS-ready asset inventories."
       },
@@ -57,11 +52,6 @@
         "type": "text",
         "heading": "Technical Challenges & Approaches",
         "body": "Designed convolutional neural network pipelines trained on multi-temporal, high-resolution aerial imagery to distinguish actual structural changes from seasonal variations, differing illumination, vegetation growth, and sensor viewpoints. Integrated the automated detection pipeline into an interactive GIS-based web validation platform for cartographic reviewers."
-      },
-      {
-        "type": "text",
-        "heading": "System Architecture & Visual Diagrams",
-        "body": "*[Architecture Diagram Placeholder: Multi-temporal change detection pipeline — co-registered ortho pairs, dual-branch Siamese convolutional encoder, difference feature aggregation, morphological post-processing, and polygon change boundary extraction.]*"
       },
       {
         "type": "text",
@@ -98,11 +88,6 @@
       },
       {
         "type": "text",
-        "heading": "System Architecture & Visual Diagrams",
-        "body": "*[Architecture Diagram Placeholder: Retinal OCT classification & explainability architecture — OCT scan normalization, CNN feature extractor, multi-class prediction, and LIME perturbation attribution heatmaps.]*"
-      },
-      {
-        "type": "text",
         "heading": "Effects & Quantitative Results",
         "body": "Validated on benchmark OCT datasets, achieving high diagnostic sensitivity and specificity while providing ophthalmologists with interpretable visual explanations that corroborate recognized clinical biomarkers (published at IEEE CSDE 2021)."
       },
@@ -133,11 +118,6 @@
         "type": "text",
         "heading": "Technical Challenges & Approaches",
         "body": "Architected and implemented AI-based automation tools across the photogrammetric orthophoto production lifecycle:\n\n- **AI-Based Image Quality Assessment (QA):** Developed deep learning models to detect cloud, shadow, and blur artifacts on raw aerial imagery prior to aerial triangulation (AT).\n- **Automated Camera Pose Estimation:** Engineered a feature-matching and tie-point generation framework to register incoming flight images against historical reference orthophotos.\n- **Elevation-Guided Seamline Optimization:** Automated seamline placement and geometric validation using PostgreSQL/PostGIS paired with AHN airborne LiDAR elevation data."
-      },
-      {
-        "type": "text",
-        "heading": "System Architecture & Visual Diagrams",
-        "body": "*[Architecture Diagram Placeholder: Photogrammetric workflow — raw frame ingestion, automated QA screening, feature matching & bundle adjustment, and orthomosaic generation.]*"
       },
       {
         "type": "text",
@@ -174,11 +154,6 @@
       },
       {
         "type": "text",
-        "heading": "System Architecture & Visual Diagrams",
-        "body": "*[Architecture Diagram Placeholder: 3D CityGML pipeline — 2D cadastral footprint input, LiDAR height extrusion, LoD2 roof generation, multi-view ray visibility testing, and texture UV atlas baking.]*"
-      },
-      {
-        "type": "text",
         "heading": "Effects & Quantitative Results",
         "body": "Maintained strict geometric alignment with a **texture shift of less than 3 pixels**, generating high-fidelity photorealistic urban digital twin models across municipal districts."
       },
@@ -209,11 +184,6 @@
         "type": "text",
         "heading": "Technical Challenges & Approaches",
         "body": "Developed point cloud intelligence algorithms for semantic segmentation and automated BIM extraction:\n\n- **Multi-Source LiDAR Processing:** Built processing pipelines handling dense 3D point clouds across diverse acquisition platforms: aerial surveys, mobile vehicle-mounted mapping systems, and high-precision indoor laser scanners.\n- **Automated Pipe & Geometry Extraction:** Implemented custom algorithms to detect industrial and building piping networks, segment structural components, and extract geometric properties directly from unstructured 3D point data."
-      },
-      {
-        "type": "text",
-        "heading": "System Architecture & Visual Diagrams",
-        "body": "*[Architecture Diagram Placeholder: Point cloud processing pipeline — voxel downsampling, normal vector estimation, RANSAC cylindrical/planar decomposition, and IFC/BIM parametric export.]*"
       },
       {
         "type": "text",
@@ -250,11 +220,6 @@
       },
       {
         "type": "text",
-        "heading": "System Architecture & Visual Diagrams",
-        "body": "*[Architecture Diagram Placeholder: Earth observation pipeline — Sentinel-2 L2A ingest, atmospheric correction, spectral index computation, deep segmentation classifier, and interactive geospatial dashboard.]*"
-      },
-      {
-        "type": "text",
         "heading": "Effects & Quantitative Results",
         "body": "This Earth observation analytics framework secured **2nd place in an international innovation tender**, demonstrating high-precision surface water quality mapping and agricultural classification."
       },
@@ -285,11 +250,6 @@
         "type": "text",
         "heading": "Technical Challenges & Approaches",
         "body": "Engineered an automated spatial database optimization framework integrating PostgreSQL/PostGIS spatial operators with AHN (Actueel Hoogtebestand Nederland) airborne LiDAR elevation data. The pipeline calculates cost surfaces based on vertical elevation variance, guiding seamlines through natural ground-level paths (such as roads and open fields) and avoiding elevated structures."
-      },
-      {
-        "type": "text",
-        "heading": "System Architecture & Visual Diagrams",
-        "body": "*[Architecture Diagram Placeholder: Spatial database seamline optimization — LiDAR Digital Surface Model (DSM) ingestion, obstacle cost raster calculation, PostGIS Voronoi/Dijkstra shortest-path routing, and automated vector seamline generation.]*"
       },
       {
         "type": "text",
@@ -326,11 +286,6 @@
       },
       {
         "type": "text",
-        "heading": "System Architecture & Visual Diagrams",
-        "body": "*[Architecture Diagram Placeholder: Multi-label traffic detection architecture — video stream frame extraction, anchor regression network, non-maximum suppression (NMS), and multi-class trajectory tracking.]*"
-      },
-      {
-        "type": "text",
         "heading": "Effects & Quantitative Results",
         "body": "Achieved real-time inference speeds with robust detection precision across congested urban roadway scenes, establishing clear trade-off benchmarks between computational latency and spatial bounding-box fidelity."
       },
@@ -361,11 +316,6 @@
         "type": "text",
         "heading": "Technical Challenges & Approaches",
         "body": "Investigated in my undergraduate B.Sc. thesis in Electrical and Electronic Engineering at the Islamic University of Technology (IUT):\n\n**\"Quantifying Locomotive Features in EEG of Impaired Consciousness (Coma) with Distinctive Cerebral Rhythms\"**\n\n- **Signal Pre-Processing & Filtering:** Applied bandpass filtering and artifact rejection to isolate neural oscillations from ocular and myogenic interference.\n- **Spectral & Rhythm Decomposition:** Extracted canonical cerebral rhythms (delta, theta, alpha, beta) and evaluated spectral power distributions and temporal rhythm dynamics across patient cohorts."
-      },
-      {
-        "type": "text",
-        "heading": "System Architecture & Visual Diagrams",
-        "body": "*[Architecture Diagram Placeholder: EEG signal processing workflow — multi-channel acquisition, notch filtering, Fast Fourier Transform (FFT) spectral decomposition, rhythmic power ratio calculation, and coma depth metric extraction.]*"
       },
       {
         "type": "text",
@@ -402,11 +352,6 @@
       },
       {
         "type": "text",
-        "heading": "System Architecture & Visual Diagrams",
-        "body": "*[Architecture Diagram Placeholder: Automated fault detection architecture — accelerometer signal acquisition, windowed FFT order tracking, baseline normalization, automated harmonic peak extraction, and taxonomy-based fault classification tree.]*"
-      },
-      {
-        "type": "text",
         "heading": "Effects & Quantitative Results",
         "body": "The autonomous engine accurately diagnosed simulated and experimental mechanical fault conditions without human intervention, maintaining deterministic 100% reproducibility across standard test cases."
       },
@@ -437,11 +382,6 @@
         "type": "text",
         "heading": "Technical Challenges & Approaches",
         "body": "Implemented statistical signal processing and calibration algorithms in MATLAB to isolate primordial cosmological signals:\n\n- **Multi-Frequency Channel Cleaning:** Processed disparate microwave radiometer feeds to calibrate sensor gain and remove localized instrument offsets.\n- **Galactic Noise Suppression:** Applied spatial and statistical filtering algorithms to attenuate high-intensity galactic plane noise while preserving microkelvin primordial temperature anisotropies."
-      },
-      {
-        "type": "text",
-        "heading": "System Architecture & Visual Diagrams",
-        "body": "*[Architecture Diagram Placeholder: Signal isolation pipeline — multi-frequency satellite raw data ingest, galactic foreground subtraction, spatial filtering, and spherical sky-map reconstruction.]*"
       },
       {
         "type": "text",

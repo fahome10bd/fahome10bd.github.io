@@ -2,15 +2,38 @@
 layout: single
 ---
 {% assign project = site.data.projects[page.content_key] %}
-<p class="project-summary">{{ project.summary | escape }}</p>
+
+{% if project.summary and project.summary != '' %}
+  <p class="project-summary">{{ project.summary | escape }}</p>
+{% endif %}
+
+{% assign has_context = false %}
+{% assign has_role = false %}
+{% assign has_track = false %}
+{% if project.context and project.context != '' %}{% assign has_context = true %}{% endif %}
+{% if project.role and project.role != '' %}{% assign has_role = true %}{% endif %}
+{% if project.track_name and project.track_name != '' %}{% assign has_track = true %}{% endif %}
+
+{% if has_context or has_role or has_track %}
 <div class="project-meta">
-  <span>{{ project.context | escape }}</span>
-  {% if project.role and project.role != '' %}<span>{{ project.role | escape }}</span>{% endif %}
-  {% if project.track_name and project.track_name != '' %}
-    <span><a href="{{ project.track_url | relative_url }}">{{ project.track_name | escape }}</a></span>
+  {% if has_context %}<span>{{ project.context | escape }}</span>{% endif %}
+  {% if has_role %}<span>{{ project.role | escape }}</span>{% endif %}
+  {% if has_track %}
+    <span>
+      {% if project.track_url and project.track_url != '' %}
+        <a href="{{ project.track_url | relative_url }}">{{ project.track_name | escape }}</a>
+      {% else %}
+        {{ project.track_name | escape }}
+      {% endif %}
+    </span>
   {% endif %}
 </div>
-{% include content-blocks.html blocks=project.blocks %}
+{% endif %}
+
+{% if project.blocks and project.blocks.size > 0 %}
+  {% include content-blocks.html blocks=project.blocks %}
+{% endif %}
+
 <p class="content-next">
   {% if project.track_url and project.track_url != '' %}
     <a href="{{ project.track_url | relative_url }}">&larr; Back to {{ project.track_name | escape }}</a> ·

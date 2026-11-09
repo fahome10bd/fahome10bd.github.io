@@ -1,0 +1,178 @@
+[
+  {
+    "id": "computer-vision",
+    "title": "1. Computer Vision & Deep Learning",
+    "url": "/portfolio/computer-vision/",
+    "icon": "fas fa-eye icon-pad-right",
+    "color_class": "track-card-cv",
+    "image": "",
+    "focus": "2D/3D object recognition, spatial tracking, deep scene understanding, and interpretable visual AI.",
+    "projects": [
+      {
+        "key": "traffic-sign-inspection",
+        "title": "Street-View GeoAI & Asset Localization (163 Classes)",
+        "url": "/portfolio/traffic-sign-inspection/",
+        "image": "",
+        "solved_problem": "Automated urban asset mapping from car-mounted 360° cameras",
+        "features": "130 traffic signs & 33 street furniture classes, GPS trajectory multi-object tracking",
+        "technology": "YOLOv5, PyTorch, Multi-View Geometry, OpenCV, Python",
+        "academic_theory": "Spatial triangulation, projective geometry & deep convolutional object detection",
+        "description": "End-to-end GeoAI pipeline that transforms raw 360° street imagery into GIS-ready geospatial asset inventories with >95% detection accuracy and 92% localization precision."
+      },
+      {
+        "key": "building-change",
+        "title": "Multi-Temporal Building Change Detection",
+        "url": "/portfolio/building-change/",
+        "image": "",
+        "solved_problem": "Automated identification of building extensions, construction, and demolitions",
+        "features": "Robust to seasonal variation, illumination differences, and sensor variations",
+        "technology": "Convolutional Neural Networks, PostGIS, Web GIS Validation Platform",
+        "academic_theory": "Spatiotemporal change analysis, Siamese convolutional feature representation",
+        "description": "Deep learning change detection system trained on multi-year aerial orthophoto surveys, achieving 88% detection accuracy and reducing manual inspection efforts by 65%."
+      },
+      {
+        "key": "retinal-oct-dl",
+        "title": "Retinal OCT Disease Classification with Explainable AI (LIME)",
+        "url": "/portfolio/retinal-oct-dl/",
+        "image": "",
+        "solved_problem": "Black-box opacity in medical deep learning classification",
+        "features": "Automated multi-class retinal pathology classification with visual attribution heatmaps",
+        "technology": "Deep CNNs, LIME (Local Interpretable Model-agnostic Explanations), PyTorch",
+        "academic_theory": "Interpretability & explainability in deep learning, perturbation-based visual salience",
+        "description": "Demystifying deep learning models for retinal OCT disease classification by integrating LIME to provide transparent, clinically verifiable visual explanations (IEEE CSDE 2021)."
+      }
+    ]
+  },
+  {
+    "id": "photogrammetry-3d",
+    "title": "2. Photogrammetry & 3D Spatial Reconstruction",
+    "url": "/portfolio/photogrammetry-3d/",
+    "icon": "fas fa-cubes icon-pad-right",
+    "color_class": "track-card-photo",
+    "image": "",
+    "focus": "Geometric camera calibration, multi-view aerial triangulation, point clouds, and 3D digital twins.",
+    "projects": [
+      {
+        "key": "orthophoto-production",
+        "title": "Orthophoto Production, Camera Pose Estimation & AI QA",
+        "url": "/portfolio/orthophoto-production/",
+        "image": "",
+        "solved_problem": "Manual aerial triangulation bottlenecks & image defect filtering",
+        "features": "97% AI QA accuracy, 2-pixel pose alignment, 90% aerial triangulation reduction",
+        "technology": "Feature Matching, Tie-Point Generation, Deep Learning, Python, PostgreSQL",
+        "academic_theory": "Epipolar geometry, photogrammetric bundle adjustment & radiometric defect modeling",
+        "description": "Comprehensive photogrammetric automation pipeline registering incoming flight imagery against historical reference orthophotos with 2-pixel precision."
+      },
+      {
+        "key": "gis-digitization",
+        "title": "Large-Scale 3D CityGML Modeling & Texture Projection",
+        "url": "/portfolio/gis-digitization/",
+        "image": "",
+        "solved_problem": "Automated urban digital twin reconstruction from 2D footprints & aerial imagery",
+        "features": "Occlusion-aware multi-view projection, <3-pixel texture shift",
+        "technology": "CityGML, 3D Mesh Generation, Multi-View Texture Projection Algorithms",
+        "academic_theory": "Projective texture mapping, visibility & occlusion culling, geometric building synthesis",
+        "description": "Automated pipeline converting 2D building footprints and elevation datasets into semantic 3D CityGML representations with high-fidelity textured facades."
+      },
+      {
+        "key": "point-cloud-processing",
+        "title": "3D Point Cloud Intelligence & Automated BIM Extraction",
+        "url": "/portfolio/point-cloud-processing/",
+        "image": "",
+        "solved_problem": "Time-intensive manual modeling of complex 3D laser scan data",
+        "features": "95% extraction accuracy, 60% manual time reduction, multi-source LiDAR compatibility",
+        "technology": "Open3D, PCL, Point Cloud Deep Learning, Geometric Primitives Extraction",
+        "academic_theory": "3D semantic segmentation, Hough/RANSAC geometric fitting, spatial clustering",
+        "description": "AI algorithms extracting structured Building Information Modeling (BIM) components and industrial piping geometry from aerial, mobile, and indoor LiDAR clouds."
+      }
+    ]
+  },
+  {
+    "id": "gis-remote-sensing",
+    "title": "3. Geographic Information Systems (GIS) & Remote Sensing",
+    "url": "/portfolio/gis-remote-sensing/",
+    "icon": "fas fa-globe-americas icon-pad-right",
+    "color_class": "track-card-gis",
+    "image": "",
+    "focus": "Automated spatial validation, satellite Earth observation, and environmental monitoring.",
+    "projects": [
+      {
+        "key": "remote-sensing",
+        "title": "Multispectral Earth Observation & Environmental AI",
+        "url": "/portfolio/remote-sensing/",
+        "image": "",
+        "solved_problem": "Automated environmental anomaly detection & crop classification from orbit",
+        "features": "2nd Place in International Innovation Tender, multi-band Sentinel-2 processing",
+        "technology": "Sentinel-2 ESA Imagery, Spectral Indices (NDVI, NDWI), Deep Learning, GDAL",
+        "academic_theory": "Radiometric calibration, multispectral band ratios & supervised land cover categorization",
+        "description": "Earth observation analytics framework processing satellite imagery to assess crop phenology, surface water quality, and harmful algae blooms."
+      },
+      {
+        "key": "postgis-seamlines",
+        "title": "PostGIS & AHN LiDAR Seamline Optimization Pipeline",
+        "url": "/portfolio/postgis-seamlines/",
+        "image": "",
+        "solved_problem": "Visible seamline artifacts and distortion across aerial orthophoto mosaics",
+        "features": "65% manual editing reduction, automatic elevation-guided boundary placement",
+        "technology": "PostgreSQL / PostGIS, AHN Airborne LiDAR, Python, QGIS",
+        "academic_theory": "Voronoi/Delaunay spatial optimization, graph-cut energy minimization on elevation surfaces",
+        "description": "Automated spatial database pipeline utilizing elevation models to optimize mosaic cutlines, avoiding buildings, elevated bridges, and high-relief structures."
+      },
+      {
+        "key": "vehicle-detection",
+        "title": "Multi-Label Vehicle & Traffic Analytics Framework",
+        "url": "/portfolio/vehicle-detection/",
+        "image": "",
+        "solved_problem": "Real-time traffic surveillance and multi-class vehicle density estimation",
+        "features": "Benchmark across 21 vehicle categories, open-source codebase",
+        "technology": "YOLOv3, YOLOv5, Faster R-CNN, PyTorch, Python",
+        "academic_theory": "Two-stage vs one-stage object detection, spatial bounding box regression & IoU metrics",
+        "description": "Comparative deep learning framework evaluating convolutional detection architectures across complex traffic conditions for intelligent transportation systems."
+      }
+    ]
+  },
+  {
+    "id": "signal-processing",
+    "title": "4. Signal Processing & Biomedical Systems",
+    "url": "/portfolio/signal-processing/",
+    "icon": "fas fa-wave-square icon-pad-right",
+    "color_class": "track-card-signal",
+    "image": "",
+    "focus": "Mathematical signal analysis, frequency-domain transformations, sensor diagnostics, and time-series modeling.",
+    "projects": [
+      {
+        "key": "eeg-research",
+        "title": "Locomotive Features in EEG of Impaired Consciousness (B.Sc. Thesis)",
+        "url": "/portfolio/eeg-research/",
+        "image": "",
+        "solved_problem": "Quantitative depth assessment of coma states from electroencephalogram signals",
+        "features": "B.Sc. Thesis at IUT (Grade: A+), cerebral rhythm extraction & spectral band decomposition",
+        "technology": "MATLAB, Digital Signal Processing, Time-Series Statistical Metrics",
+        "academic_theory": "Discrete Fourier Analysis, non-stationary biological rhythms & neural state estimation",
+        "description": "Decomposing clinical EEG time series into canonical rhythms to extract discriminative features characterizing depths of consciousness and coma states."
+      },
+      {
+        "key": "fault-detection",
+        "title": "Automated Machine Fault Detection via Accelerometer Vibration Signals",
+        "url": "/portfolio/fault-detection/",
+        "image": "",
+        "solved_problem": "Eliminating manual spectral curve inspection in machine condition monitoring",
+        "features": "Autonomous rule engine classifying bearing, gear, unbalance, and misalignment defects",
+        "technology": "MATLAB, Discrete Fourier Transform (FFT), Order Spectrum (×RPM), Peak salience tracking",
+        "academic_theory": "Vibration order analysis, spectral coherence matching & empirical decision boundaries",
+        "description": "Autonomous fault detection engine comparing test accelerometer vibration signatures against healthy baselines to declare fault types without human intervention."
+      },
+      {
+        "key": "cmbr-astrophysics",
+        "title": "CMBR Primordial Signal Isolation & Sky-Map Generation",
+        "url": "/portfolio/cmbr-astrophysics/",
+        "image": "",
+        "solved_problem": "High-noise background extraction in fragmented astronomical satellite data",
+        "features": "Clean primordial cosmological signal isolation from NASA WMAP raw sensor feeds",
+        "technology": "MATLAB, Statistical Signal Filtering, Numerical Data Cleaning",
+        "academic_theory": "Stochastic noise suppression, spatial spatial filtering on spherical manifolds",
+        "description": "Processing fragmented Cosmic Microwave Background Radiation (CMBR) data to eliminate cosmological noise and generate clean primordial radiation maps."
+      }
+    ]
+  }
+]

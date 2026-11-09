@@ -9,63 +9,27 @@ author_profile: true
 <p class="portfolio-intro">Selected engineering and academic research projects spanning Computer Vision, Photogrammetry &amp; 3D Reconstruction, Geographic Information Systems (GIS), and Signal Processing.</p>
 
 <div class="track-index-grid">
-  <div class="track-card">
-    <div class="track-card-header track-card-cv">
-      <h3><a href="{{ '/portfolio/computer-vision/' | relative_url }}"><i class="fas fa-eye icon-pad-right"></i>1. Computer Vision &amp; Deep Learning</a></h3>
+  {% for track in site.data.tracks %}
+    <div class="track-card">
+      <div class="track-card-header {{ track.color_class | default: '' }}">
+        <h3><a href="{{ track.url | relative_url }}">{% if track.icon and track.icon != '' %}<i class="{{ track.icon }}"></i>{% endif %}{{ track.title | escape }}</a></h3>
+      </div>
+      <div class="track-card-body">
+        {% if track.image and track.image != '' %}
+          <img src="{{ track.image | relative_url }}" alt="{{ track.title | escape }}" class="track-image" loading="lazy">
+        {% endif %}
+        {% if track.focus and track.focus != '' %}
+          <p class="track-focus"><strong>Focus:</strong> {{ track.focus | escape }}</p>
+        {% endif %}
+        {% if track.projects and track.projects.size > 0 %}
+          <ul class="track-project-list">
+            {% for proj in track.projects %}
+              <li><a href="{{ proj.url | relative_url }}">{{ proj.title | escape }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        <a class="track-explore-link" href="{{ track.url | relative_url }}">Explore Track Projects &rarr;</a>
+      </div>
     </div>
-    <div class="track-card-body">
-      <p class="track-focus"><strong>Focus:</strong> 2D/3D object recognition, spatial tracking, deep scene understanding, and interpretable visual AI.</p>
-      <ul class="track-project-list">
-        <li><a href="{{ '/portfolio/traffic-sign-inspection/' | relative_url }}">Street-View GeoAI &amp; Asset Localization (163 Classes)</a></li>
-        <li><a href="{{ '/portfolio/building-change/' | relative_url }}">Multi-Temporal Building Change Detection</a></li>
-        <li><a href="{{ '/portfolio/retinal-oct-dl/' | relative_url }}">Retinal OCT Disease Classification with Explainable AI (LIME)</a></li>
-      </ul>
-      <a class="track-explore-link" href="{{ '/portfolio/computer-vision/' | relative_url }}">Explore Track Projects &rarr;</a>
-    </div>
-  </div>
-
-  <div class="track-card">
-    <div class="track-card-header track-card-photo">
-      <h3><a href="{{ '/portfolio/photogrammetry-3d/' | relative_url }}"><i class="fas fa-cubes icon-pad-right"></i>2. Photogrammetry &amp; 3D Spatial Reconstruction</a></h3>
-    </div>
-    <div class="track-card-body">
-      <p class="track-focus"><strong>Focus:</strong> Geometric camera calibration, multi-view aerial triangulation, point clouds, and 3D digital twins.</p>
-      <ul class="track-project-list">
-        <li><a href="{{ '/portfolio/orthophoto-production/' | relative_url }}">Orthophoto Production, Camera Pose Estimation &amp; AI QA</a></li>
-        <li><a href="{{ '/portfolio/gis-digitization/' | relative_url }}">Large-Scale 3D CityGML Modeling &amp; Texture Projection</a></li>
-        <li><a href="{{ '/portfolio/point-cloud-processing/' | relative_url }}">3D Point Cloud Intelligence &amp; Automated BIM Extraction</a></li>
-      </ul>
-      <a class="track-explore-link" href="{{ '/portfolio/photogrammetry-3d/' | relative_url }}">Explore Track Projects &rarr;</a>
-    </div>
-  </div>
-
-  <div class="track-card">
-    <div class="track-card-header track-card-gis">
-      <h3><a href="{{ '/portfolio/gis-remote-sensing/' | relative_url }}"><i class="fas fa-globe-americas icon-pad-right"></i>3. Geographic Information Systems (GIS) &amp; Remote Sensing</a></h3>
-    </div>
-    <div class="track-card-body">
-      <p class="track-focus"><strong>Focus:</strong> Automated spatial validation, satellite Earth observation, and environmental monitoring.</p>
-      <ul class="track-project-list">
-        <li><a href="{{ '/portfolio/remote-sensing/' | relative_url }}">Multispectral Earth Observation &amp; Environmental AI</a></li>
-        <li><a href="{{ '/portfolio/postgis-seamlines/' | relative_url }}">PostGIS &amp; AHN LiDAR Seamline Optimization Pipeline</a></li>
-        <li><a href="{{ '/portfolio/vehicle-detection/' | relative_url }}">Multi-Label Vehicle &amp; Traffic Analytics Framework</a></li>
-      </ul>
-      <a class="track-explore-link" href="{{ '/portfolio/gis-remote-sensing/' | relative_url }}">Explore Track Projects &rarr;</a>
-    </div>
-  </div>
-
-  <div class="track-card">
-    <div class="track-card-header track-card-signal">
-      <h3><a href="{{ '/portfolio/signal-processing/' | relative_url }}"><i class="fas fa-wave-square icon-pad-right"></i>4. Signal Processing &amp; Biomedical Systems</a></h3>
-    </div>
-    <div class="track-card-body">
-      <p class="track-focus"><strong>Focus:</strong> Mathematical signal analysis, frequency-domain transformations, sensor diagnostics, and time-series modeling.</p>
-      <ul class="track-project-list">
-        <li><a href="{{ '/portfolio/eeg-research/' | relative_url }}">Locomotive Features in EEG of Impaired Consciousness (B.Sc. Thesis)</a></li>
-        <li><a href="{{ '/portfolio/fault-detection/' | relative_url }}">Automated Machine Fault Detection via Accelerometer Vibration Signals</a></li>
-        <li><a href="{{ '/portfolio/cmbr-astrophysics/' | relative_url }}">CMBR Primordial Signal Isolation &amp; Sky-Map Generation</a></li>
-      </ul>
-      <a class="track-explore-link" href="{{ '/portfolio/signal-processing/' | relative_url }}">Explore Track Projects &rarr;</a>
-    </div>
-  </div>
+  {% endfor %}
 </div>
